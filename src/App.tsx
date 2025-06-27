@@ -528,11 +528,10 @@ const App = () => {
             {/* Etapas de Desenvolvimento Unificadas */}
             <div className="card p-8 border-0 shadow-lg glass-effect mt-8">
               <h4 className="text-heading-2 text-gray-900 mb-2">Etapas de Desenvolvimento</h4>
-              {/* <h5 className="text-body text-gray-700">Versões do Oráculo Digital</h5> */}
               <div className="space-y-10 mt-6">
-                {/* Diagramas 1 e 2 lado a lado */}
-                <div className="flex flex-row gap-12">
-                  <div className="flex flex-col items-start w-1/2">
+                {/* Diagramas 1 e 2 */}
+                <div className="flex flex-col md:flex-row gap-12">
+                  <div className="flex flex-col items-start w-full md:w-1/2">
                     <div className="flex items-center mb-2">
                       <div className="w-8 h-8 bg-secondary-100 rounded-full flex items-center justify-center text-secondary-600 font-semibold mr-2">1</div>
                       <p className="text-body-sm text-gray-700">Versão 1.0</p>
@@ -540,7 +539,7 @@ const App = () => {
                     <div className="mermaid" dangerouslySetInnerHTML={{ __html: diagram1 }} />
                   </div>
 
-                  <div className="flex flex-col items-start w-1/2">
+                  <div className="flex flex-col items-start w-full md:w-1/2">
                     <div className="flex items-center mb-2">
                       <div className="w-8 h-8 bg-secondary-100 rounded-full flex items-center justify-center text-secondary-600 font-semibold mr-2">2</div>
                       <p className="text-body-sm text-gray-700">Versão 2.0</p>
@@ -548,9 +547,9 @@ const App = () => {
                     <div className="mermaid" dangerouslySetInnerHTML={{ __html: diagram2 }} />
                   </div>
                 </div>
-                {/* Diagramas 3 e 4 lado a lado */}
-                <div className="flex flex-row gap-12">
-                  <div className="flex flex-col items-start w-1/2">
+                {/* Diagramas 3 e 4 */}
+                <div className="flex flex-col md:flex-row gap-12">
+                  <div className="flex flex-col items-start w-full md:w-1/2">
                     <div className="flex items-center mb-2">
                       <div className="w-8 h-8 bg-secondary-100 rounded-full flex items-center justify-center text-secondary-600 font-semibold mr-2">3</div>
                       <p className="text-body-sm text-gray-700">Versão 3.0</p>
@@ -558,7 +557,7 @@ const App = () => {
                     <div className="mermaid" dangerouslySetInnerHTML={{ __html: diagram3 }} />
                   </div>
 
-                  <div className="flex flex-col items-start w-1/2">
+                  <div className="flex flex-col items-start w-full md:w-1/2">
                     <div className="flex items-center mb-2">
                       <div className="w-8 h-8 bg-secondary-100 rounded-full flex items-center justify-center text-secondary-600 font-semibold mr-2">4</div>
                       <p className="text-body-sm text-gray-700">Versão 4.0</p>
@@ -582,7 +581,7 @@ const App = () => {
           {/* Header Section - Full Width */}
           <div className="card p-12 border-0 shadow-xl glass-effect">
             <div className="flex items-center mb-8">
-              <div className="w-16 h-16 bg-error-500 text-white rounded-2xl flex items-center justify-center font-bold mr-6 shadow-lg neon-glow">
+              <div className="w-16 h-16 bg-accent-500 text-white rounded-2xl flex items-center justify-center font-bold mr-6 shadow-lg neon-glow">
                 1
               </div>
               <div>
@@ -598,32 +597,32 @@ const App = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div className="card p-6 border-0 shadow-lg glass-effect text-center">
-                  <div className="w-12 h-12 bg-error-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <Database className="w-6 h-6 text-error-600" />
+                  <div className="w-12 h-12 bg-accent-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <Database className="w-6 h-6 text-accent-600" />
                   </div>
                   <h4 className="text-heading-3 text-gray-900 mb-2">60</h4>
                   <p className="text-body-sm text-gray-700">amostras</p>
                 </div>
 
                 <div className="card p-6 border-0 shadow-lg glass-effect text-center">
-                  <div className="w-12 h-12 bg-error-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <Activity className="w-6 h-6 text-error-600" />
+                  <div className="w-12 h-12 bg-accent-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <Activity className="w-6 h-6 text-accent-600" />
                   </div>
                   <h4 className="text-heading-3 text-gray-900 mb-2">2</h4>
                   <p className="text-body-sm text-gray-700">classes diferentes</p>
                 </div>
 
                 <div className="card p-6 border-0 shadow-lg glass-effect text-center">
-                  <div className="w-12 h-12 bg-error-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <Zap className="w-6 h-6 text-error-600" />
+                  <div className="w-12 h-12 bg-accent-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <Zap className="w-6 h-6 text-accent-600" />
                   </div>
                   <h4 className="text-heading-3 text-gray-900 mb-2">250 Hz</h4>
                   <p className="text-body-sm text-gray-700">Frequência de amostragem</p>
                 </div>
 
                 <div className="card p-6 border-0 shadow-lg glass-effect text-center">
-                  <div className="w-12 h-12 bg-error-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <Clock className="w-6 h-6 text-error-600" />
+                  <div className="w-12 h-12 bg-accent-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <Clock className="w-6 h-6 text-accent-600" />
                   </div>
                   <h4 className="text-heading-3 text-gray-900 mb-2">~4s</h4>
                   <p className="text-body-sm text-gray-700">Duração por amostra</p>
@@ -647,6 +646,35 @@ const App = () => {
               </p>
             </div>
           </div>
+
+          <div className="space-y-8">
+            {/* Topo Channels Image */}
+            <div className="card p-8 border-0 shadow-xl glass-effect">
+              <img
+                src="/topo_channels.png"
+                alt="Posição dos canais EEG no topo do crânio"
+                className="w-half h-auto rounded-lg shadow-lg mx-auto"
+              />
+              <p className="text-body-sm text-gray-600 mt-4 text-center italic">
+               Posição dos canais EEG no topo do crânio.
+              </p>
+            </div>
+          </div>
+
+          <div className="space-y-8">
+            {/* Audio Instructions */}
+            <div className="card p-8 border-0 shadow-xl glass-effect">
+              <audio
+                src="/audio_instructions_ses-03.wav"
+                controls
+                className="w-half mx-auto"
+              />
+              <p className="text-body-sm text-gray-600 mt-4 text-center italic">
+               Audio com as instruções para a tarefa de Sun Imagery.
+              </p>
+            </div>
+          </div>
+
         </div>
       )
     },
