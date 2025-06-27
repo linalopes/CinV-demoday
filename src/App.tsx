@@ -160,48 +160,48 @@ const App = () => {
       subtitle: "Quando o Pensamento se Torna Texto",
       icon: Brain,
       content: (
-        <div className="space-y-16 animate-fade-in">
-          <div className="text-center space-y-8">
+        <div className="space-y-8 sm:space-y-16 animate-fade-in">
+          <div className="text-center space-y-6 sm:space-y-8">
             {/* Brain GIF - Positioned after the title */}
-            <div className="mb-12">
+            <div className="mb-12 sm:mb-12">
               <img
                 src="/brain-2.gif"
                 alt="Animação do cérebro mostrando atividade neural e interfaces cérebro-computador"
-                className="w-full  mx-auto rounded-xl shadow-lg"
+                className="w-full mx-auto rounded-xl shadow-lg"
                 style={{ maxHeight: '500px', objectFit: 'contain' }}
               />
             </div>
 
-            <div className="flex justify-center items-center space-x-6 mb-12">
+            <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6 mb-8 sm:mb-12">
               <div className="relative">
-                <Brain className="w-20 h-20 text-secondary-500" />
-                <div className="absolute -top-2 -right-2 w-6 h-6 bg-accent-500 rounded-full animate-pulse"></div>
+                <Brain className="w-16 h-16 sm:w-20 sm:h-20 text-secondary-500" />
+                <div className="absolute -top-2 -right-2 w-5 h-5 sm:w-6 sm:h-6 bg-accent-500 rounded-full animate-pulse"></div>
               </div>
-              <ArrowRight className="w-8 h-8 text-gray-400" />
+              <ArrowRight className="w-6 h-6 sm:w-8 sm:h-8 text-gray-400 rotate-90 sm:rotate-0" />
               <div className="relative">
-                <Zap className="w-20 h-20 text-warning-500" />
-                <div className="absolute -top-1 -right-1 w-4 h-4 bg-warning-300 rounded-full animate-pulse"></div>
+                <Zap className="w-16 h-16 sm:w-20 sm:h-20 text-warning-500" />
+                <div className="absolute -top-1 -right-1 w-3 h-3 sm:w-4 sm:h-4 bg-warning-300 rounded-full animate-pulse"></div>
               </div>
-              <ArrowRight className="w-8 h-8 text-gray-400" />
-              <div className="card p-6 shadow-xl border-0 glass-effect neon-glow">
-                <span className="text-2xl font-medium text-gray-800">Olá mundo!</span>
+              <ArrowRight className="w-6 h-6 sm:w-8 sm:h-8 text-gray-400 rotate-90 sm:rotate-0" />
+              <div className="card p-4 sm:p-6 shadow-xl border-0 glass-effect neon-glow">
+                <span className="text-lg sm:text-2xl font-medium text-gray-800">Olá mundo!</span>
               </div>
             </div>
 
-            <div className="card p-10 border-0 glass-effect">
-              <h3 className="text-heading-1 text-gray-900 mb-6">E se você pudesse escrever apenas pensando?</h3>
-              <p className="text-body-lg text-gray-700 leading-relaxed mb-8 max-w-4xl mx-auto">
+            <div className="card p-6 sm:p-10 border-0 glass-effect">
+              <h3 className="text-heading-2 sm:text-heading-1 text-gray-900 mb-4 sm:mb-6">E se você pudesse escrever apenas pensando?</h3>
+              <p className="text-body sm:text-body-lg text-gray-700 leading-relaxed mb-6 sm:mb-8 max-w-4xl mx-auto">
                 Com o advento da inteligência artificial, precisamos repensar a interface humano-máquina.
                 Imagine que o simples pensar se torna um prompt para você interagir com seu IA favorito.
               </p>
-              <div className="card p-8 shadow-lg border-0 glass-effect">
-                <div className="flex items-center space-x-4 mb-6">
-                  <div className="w-12 h-12 bg-success-100 rounded-xl flex items-center justify-center">
-                    <Accessibility className="w-6 h-6 text-success-600" />
+              <div className="card p-6 sm:p-8 shadow-lg border-0 glass-effect">
+                <div className="flex flex-col sm:flex-row items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-4 sm:mb-6">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-success-100 rounded-xl flex items-center justify-center">
+                    <Accessibility className="w-5 h-5 sm:w-6 sm:h-6 text-success-600" />
                   </div>
-                  <span className="text-heading-3 text-gray-900">Tecnologia Mais Que Inclusiva</span>
+                  <span className="text-heading-3 text-gray-900 text-center sm:text-left">Tecnologia Mais Que Inclusiva</span>
                 </div>
-                <p className="text-body text-gray-700 leading-relaxed">
+                <p className="text-body-sm sm:text-body text-gray-700 leading-relaxed">
                   E se ela pudesse simplesmente <strong className="text-secondary-600">pensar</strong> e, baseado nos dados das suas ondas neurais,
                   conseguíssemos traduzir seus pensamentos diretamente em texto? Isso não é ficção científica —
                   é o futuro da comunicação através de interfaces humano-máquina.
@@ -209,50 +209,50 @@ const App = () => {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-              <div className="card p-8 border-l-4 border-secondary-500 hover:shadow-xl transition-all duration-300 glass-effect">
-                <div className="w-12 h-12 bg-secondary-100 rounded-xl flex items-center justify-center mb-6">
-                  <Brain className="w-6 h-6 text-secondary-600" />
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mt-8 sm:mt-12">
+              <div className="card p-6 sm:p-8 border-l-4 border-secondary-500 hover:shadow-xl transition-all duration-300 glass-effect">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-secondary-100 rounded-xl flex items-center justify-center mb-4 sm:mb-6">
+                  <Brain className="w-5 h-5 sm:w-6 sm:h-6 text-secondary-600 mx-auto" />
                 </div>
-                <h4 className="text-heading-3 text-gray-900 mb-4">Pensamento</h4>
+                <h4 className="text-heading-3 text-gray-900 mb-3 sm:mb-4">Pensamento</h4>
                 <p className="text-body-sm text-gray-600 leading-relaxed">Captura de sinais neurais através de EEG não-invasivo</p>
               </div>
-              <div className="card p-8 border-l-4 border-warning-500 hover:shadow-xl transition-all duration-300 glass-effect">
-                <div className="w-12 h-12 bg-warning-100 rounded-xl flex items-center justify-center mb-6">
-                  <Zap className="w-6 h-6 text-warning-600" />
+              <div className="card p-6 sm:p-8 border-l-4 border-warning-500 hover:shadow-xl transition-all duration-300 glass-effect">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-warning-100 rounded-xl flex items-center justify-center mb-4 sm:mb-6">
+                  <Zap className="w-5 h-5 sm:w-6 sm:h-6 text-warning-600 mx-auto" />
                 </div>
-                <h4 className="text-heading-3 text-gray-900 mb-4">Processamento IA</h4>
+                <h4 className="text-heading-3 text-gray-900 mb-3 sm:mb-4">Processamento IA</h4>
                 <p className="text-body-sm text-gray-600 leading-relaxed">Algoritmos avançados decodificam padrões neurais</p>
               </div>
-              <div className="card p-8 border-l-4 border-success-500 hover:shadow-xl transition-all duration-300 glass-effect">
-                <div className="w-12 h-12 bg-success-100 rounded-xl flex items-center justify-center mb-6">
-                  <Accessibility className="w-6 h-6 text-success-600" />
+              <div className="card p-6 sm:p-8 border-l-4 border-success-500 hover:shadow-xl transition-all duration-300 glass-effect sm:col-span-2 lg:col-span-1">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-success-100 rounded-xl flex items-center justify-center mb-4 sm:mb-6">
+                  <Accessibility className="w-5 h-5 sm:w-6 sm:h-6 text-success-600" />
                 </div>
-                <h4 className="text-heading-3 text-gray-900 mb-4">Prompt Neural</h4>
+                <h4 className="text-heading-3 text-gray-900 mb-3 sm:mb-4">Prompt Neural</h4>
                 <p className="text-body-sm text-gray-600 leading-relaxed">Texto gerado automaticamente, revolucionando o acesso digital</p>
               </div>
             </div>
           </div>
 
           {/* Seção Consolidada da Pesquisa */}
-          <div className="card p-12 border-0 glass-effect mt-16">
-            <div className="text-center mb-12">
-              <h3 className="text-heading-1 text-gray-900 mb-6">Contextualização da Pesquisa</h3>
-              <p className="text-body-lg text-gray-700 max-w-4xl mx-auto">
+          <div className="card p-6 sm:p-12 border-0 glass-effect mt-12 sm:mt-16">
+            <div className="text-center mb-8 sm:mb-12">
+              <h3 className="text-heading-2 sm:text-heading-1 text-gray-900 mb-4 sm:mb-6">Contextualização da Pesquisa</h3>
+              <p className="text-body sm:text-body-lg text-gray-700 max-w-4xl mx-auto">
                 Decodificando frases através de Ondas Cerebrais usando EEG e Machine Learning
               </p>
             </div>
 
             {/* Objetivos e Metodologia - Layout Horizontal */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-12">
-              <div className="card p-8 border-0 shadow-lg glass-effect">
-                <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mr-4">
-                    <Target className="w-6 h-6 text-primary-600" />
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-10 mb-8 sm:mb-12">
+              <div className="card p-6 sm:p-8 border-0 shadow-lg glass-effect">
+                <div className="flex flex-col sm:flex-row items-start sm:items-center mb-4 sm:mb-6">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary-100 rounded-xl flex items-center justify-center mr-0 sm:mr-4 mb-3 sm:mb-0">
+                    <Target className="w-5 h-5 sm:w-6 sm:h-6 text-primary-600" />
                   </div>
-                  <h4 className="text-heading-2 text-gray-900">Objetivos</h4>
+                  <h4 className="text-heading-3 sm:text-heading-2 text-gray-900 text-center sm:text-left">Objetivos</h4>
                 </div>
-                <div className="space-y-4">
+                <div className="space-y-3 sm:space-y-4">
                   <p className="text-body-sm text-gray-700 leading-relaxed">
                     <strong>Principal:</strong> Investigar se é possível identificar frases específicas
                     através da análise de sinais EEG durante audição e recordação mental.
@@ -264,12 +264,12 @@ const App = () => {
                 </div>
               </div>
 
-              <div className="card p-8 border-0 shadow-lg glass-effect">
-                <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-accent-100 rounded-xl flex items-center justify-center mr-4">
-                    <Settings className="w-6 h-6 text-accent-600" />
+              <div className="card p-6 sm:p-8 border-0 shadow-lg glass-effect">
+                <div className="flex flex-col sm:flex-row items-start sm:items-center mb-4 sm:mb-6">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-accent-100 rounded-xl flex items-center justify-center mr-0 sm:mr-4 mb-3 sm:mb-0">
+                    <Settings className="w-5 h-5 sm:w-6 sm:h-6 text-accent-600" />
                   </div>
-                  <h4 className="text-heading-2 text-gray-900">Metodologia</h4>
+                  <h4 className="text-heading-3 sm:text-heading-2 text-gray-900 text-center sm:text-left">Metodologia</h4>
                 </div>
                 <div className="space-y-3">
                   <div className="flex items-center">
@@ -289,11 +289,11 @@ const App = () => {
             </div>
 
             {/* Dados, Processamento e Público-Alvo - Layout Compacto */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-              <div className="card p-6 border-0 shadow-lg glass-effect">
-                <div className="flex items-center mb-4">
-                  <div className="w-10 h-10 bg-secondary-100 rounded-lg flex items-center justify-center mr-3">
-                    <Database className="w-5 h-5 text-secondary-600" />
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-8 sm:mb-12">
+              <div className="card p-4 sm:p-6 border-0 shadow-lg glass-effect">
+                <div className="flex items-center mb-3 sm:mb-4">
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 bg-secondary-100 rounded-lg flex items-center justify-center mr-3">
+                    <Database className="w-4 h-4 sm:w-5 sm:h-5 text-secondary-600" />
                   </div>
                   <h4 className="text-heading-3 text-gray-900">Coleta de Dados</h4>
                 </div>
@@ -313,10 +313,10 @@ const App = () => {
                 </div>
               </div>
 
-              <div className="card p-6 border-0 shadow-lg glass-effect">
-                <div className="flex items-center mb-4">
-                  <div className="w-10 h-10 bg-success-100 rounded-lg flex items-center justify-center mr-3">
-                    <BarChart3 className="w-5 h-5 text-success-600" />
+              <div className="card p-4 sm:p-6 border-0 shadow-lg glass-effect">
+                <div className="flex items-center mb-3 sm:mb-4">
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 bg-success-100 rounded-lg flex items-center justify-center mr-3">
+                    <BarChart3 className="w-4 h-4 sm:w-5 sm:h-5 text-success-600" />
                   </div>
                   <h4 className="text-heading-3 text-gray-900">Processamento</h4>
                 </div>
@@ -336,10 +336,10 @@ const App = () => {
                 </div>
               </div>
 
-              <div className="card p-6 border-0 shadow-lg glass-effect">
-                <div className="flex items-center mb-4">
-                  <div className="w-10 h-10 bg-warning-100 rounded-lg flex items-center justify-center mr-3">
-                    <Users className="w-5 h-5 text-warning-600" />
+              <div className="card p-4 sm:p-6 border-0 shadow-lg glass-effect sm:col-span-2 lg:col-span-1">
+                <div className="flex items-center mb-3 sm:mb-4">
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 bg-warning-100 rounded-lg flex items-center justify-center mr-3">
+                    <Users className="w-4 h-4 sm:w-5 sm:h-5 text-warning-600" />
                   </div>
                   <h4 className="text-heading-3 text-gray-900">Público-Alvo</h4>
                 </div>
@@ -361,27 +361,27 @@ const App = () => {
             </div>
 
             {/* Ferramentas - Layout Horizontal Compacto */}
-            <div className="card p-6 border-0 shadow-lg mb-8 glass-effect">
-              <div className="flex items-center mb-6">
-                <div className="w-10 h-10 bg-gray-100 rounded-lg flex items-center justify-center mr-3">
-                  <FileText className="w-5 h-5 text-gray-600" />
+            <div className="card p-4 sm:p-6 border-0 shadow-lg mb-6 sm:mb-8 glass-effect">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center mb-4 sm:mb-6">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gray-100 rounded-lg flex items-center justify-center mr-0 sm:mr-3 mb-3 sm:mb-0">
+                  <FileText className="w-4 h-4 sm:w-5 sm:h-5 text-gray-600" />
                 </div>
-                <h4 className="text-heading-3 text-gray-900">Ferramentas e Recursos</h4>
+                <h4 className="text-heading-3 text-gray-900 text-center sm:text-left">Ferramentas e Recursos</h4>
               </div>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div className="glass-effect rounded-lg p-4 text-center">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
+                <div className="glass-effect rounded-lg p-3 sm:p-4 text-center">
                   <span className="text-body-sm font-medium text-secondary-800">OpenBCI</span>
                   <p className="text-caption text-secondary-600 mt-1">Hardware EEG</p>
                 </div>
-                <div className="glass-effect rounded-lg p-4 text-center">
+                <div className="glass-effect rounded-lg p-3 sm:p-4 text-center">
                   <span className="text-body-sm font-medium text-accent-800">Python</span>
                   <p className="text-caption text-accent-600 mt-1">Análise de dados</p>
                 </div>
-                <div className="glass-effect rounded-lg p-4 text-center">
+                <div className="glass-effect rounded-lg p-3 sm:p-4 text-center">
                   <span className="text-body-sm font-medium text-primary-800">Scikit-learn</span>
                   <p className="text-caption text-primary-600 mt-1">Machine Learning</p>
                 </div>
-                <div className="glass-effect rounded-lg p-4 text-center">
+                <div className="glass-effect rounded-lg p-3 sm:p-4 text-center">
                   <span className="text-body-sm font-medium text-success-800">MNE</span>
                   <p className="text-caption text-success-600 mt-1">Processamento</p>
                 </div>
@@ -389,14 +389,14 @@ const App = () => {
             </div>
 
             {/* Relevância - Seção Final Compacta */}
-            <div className="card p-6 border-0 shadow-lg glass-effect">
-              <div className="flex items-center mb-6">
-                <div className="w-10 h-10 bg-warning-100 rounded-lg flex items-center justify-center mr-3">
-                  <Lightbulb className="w-5 h-5 text-warning-600" />
+            <div className="card p-4 sm:p-6 border-0 shadow-lg glass-effect">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center mb-4 sm:mb-6">
+                <div className="w-8 h-8 sm:w-10 sm:h-10 bg-warning-100 rounded-lg flex items-center justify-center mr-0 sm:mr-3 mb-3 sm:mb-0">
+                  <Lightbulb className="w-4 h-4 sm:w-5 sm:h-5 text-warning-600" />
                 </div>
-                <h4 className="text-heading-3 text-gray-900">Relevância e Impacto</h4>
+                <h4 className="text-heading-3 text-gray-900 text-center sm:text-left">Relevância e Impacto</h4>
               </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
                 <div>
                   <h5 className="text-body font-medium text-gray-900 mb-2">Impacto Científico</h5>
                   <p className="text-body-sm text-gray-700 leading-relaxed">
@@ -1488,7 +1488,7 @@ const App = () => {
           </div>
 
           <div className="card p-12 border-0 shadow-xl text-center glass-effect neon-glow">
-            <h3 className="text-heading-1 text-gray-900 mb-6">“Um mundo onde pensar é suficiente para se comunicar e se expressar.”</h3>
+            <h3 className="text-heading-1 text-gray-900 mb-6">"Um mundo onde pensar é suficiente para se comunicar e se expressar."</h3>
             <p className="text-body-lg text-gray-700 mb-10 max-w-4xl mx-auto leading-relaxed">
               Este projeto representa um passo em direção a tecnologias de interface cérebro-máquina realmente pessoais, não invasivas e escaláveis, com potencial de transformar a vida e a imaginação das pessoas sem abrir mão da autonomia e da privacidade.
             </p>
@@ -1543,7 +1543,7 @@ const App = () => {
                 Mario Tavares
               </h3>
               <div className="space-y-4 text-success-800">
-                <p className="text-body">I’m a product manager with a background in finance and tech, having led product initiatives at TRX, Trix Investimentos, and Alice Saúde. Through these roles, I’ve seen how data-driven decisions dramatically improve user engagement and business outcomes. Now, I’m eager to deepen my technical skills by joining a data science and AI bootcamp. My goal is to apply machine learning and advanced analytics to build intelligent products that truly serve users’ needs.</p>
+                <p className="text-body">I'm a product manager with a background in finance and tech, having led product initiatives at TRX, Trix Investimentos, and Alice Saúde. Through these roles, I've seen how data-driven decisions dramatically improve user engagement and business outcomes. Now, I'm eager to deepen my technical skills by joining a data science and AI bootcamp. My goal is to apply machine learning and advanced analytics to build intelligent products that truly serve users' needs.</p>
               </div>
             </div>
             <div className="card p-8 border-0 shadow-lg glass-effect">
@@ -1569,7 +1569,7 @@ const App = () => {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
   };
 
-  const goToSlide = (index) => {
+  const goToSlide = (index: number) => {
     setCurrentSlide(index);
     // Close sidebar on mobile after selection
     if (window.innerWidth < 768) {
@@ -1578,7 +1578,7 @@ const App = () => {
   };
 
   useEffect(() => {
-    let interval;
+    let interval: number | undefined;
     if (isPlaying) {
       interval = setInterval(() => {
         nextSlide();
@@ -1589,12 +1589,12 @@ const App = () => {
 
   return (
     <div className="min-h-screen dark-gradient-bg">
-      {/* Sidebar */}
-      <div className={`fixed inset-y-0 left-0 z-50 w-80 glass-effect border-r border-gray-300 transform transition-transform duration-300 ease-in-out ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'
+      {/* Sidebar - Responsive */}
+      <div className={`fixed inset-y-0 left-0 z-50 w-full sm:w-80 glass-effect border-r border-gray-300 transform transition-transform duration-300 ease-in-out ${sidebarOpen ? 'translate-x-0' : '-translate-x-full'
         }`}>
         <div className="flex flex-col h-full">
           {/* Sidebar Header */}
-          <div className="flex items-center justify-between p-6 border-b border-gray-300">
+          <div className="flex items-center justify-between p-4 sm:p-6 border-b border-gray-300">
             <div className="flex items-center space-x-3">
               <div className="w-8 h-8 bg-gradient-to-br from-secondary-500 to-accent-500 rounded-lg flex items-center justify-center shadow-lg neon-glow">
                 <Brain className="w-4 h-4 text-white" />
@@ -1610,7 +1610,7 @@ const App = () => {
           </div>
 
           {/* Sidebar Content */}
-          <div className="flex-1 overflow-y-auto p-6">
+          <div className="flex-1 overflow-y-auto p-4 sm:p-6">
             <div className="space-y-2">
               {slides.map((slide, index) => {
                 const Icon = slide.icon;
@@ -1620,16 +1620,16 @@ const App = () => {
                   <button
                     key={slide.id}
                     onClick={() => goToSlide(index)}
-                    className={`w-full flex items-center space-x-4 p-4 rounded-lg transition-all duration-200 text-left focus-ring ${isActive
+                    className={`w-full flex items-center space-x-3 sm:space-x-4 p-3 sm:p-4 rounded-lg transition-all duration-200 text-left focus-ring ${isActive
                         ? 'bg-gradient-to-r from-secondary-100 to-accent-100 border-l-4 border-secondary-500 shadow-md'
                         : 'hover:bg-gray-100'
                       }`}
                   >
-                    <div className={`w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 ${isActive
+                    <div className={`w-8 h-8 sm:w-10 sm:h-10 rounded-lg flex items-center justify-center flex-shrink-0 ${isActive
                         ? 'bg-secondary-500 text-white shadow-lg neon-glow'
                         : 'bg-gray-200 text-gray-600'
                       }`}>
-                      <Icon className="w-5 h-5" />
+                      <Icon className="w-4 h-4 sm:w-5 sm:h-5" />
                     </div>
                     <div className="flex-1 min-w-0">
                       <h3 className={`text-body font-medium truncate ${isActive ? 'text-gray-900' : 'text-gray-700'
@@ -1651,7 +1651,7 @@ const App = () => {
           </div>
 
           {/* Sidebar Footer */}
-          <div className="p-6 border-t border-gray-300">
+          <div className="p-4 sm:p-6 border-t border-gray-300">
             <div className="flex items-center justify-between text-body-sm text-gray-600">
               <span>Progresso</span>
               <span>{currentSlide + 1} de {slides.length}</span>
@@ -1669,28 +1669,32 @@ const App = () => {
       {/* Sidebar Overlay */}
       {sidebarOpen && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-40 md:hidden"
+          className="fixed inset-0 bg-black bg-opacity-50 z-40 sm:hidden"
           onClick={() => setSidebarOpen(false)}
         ></div>
       )}
 
-      {/* Header */}
+      {/* Header - Responsive */}
       <header className="glass-effect sticky top-0 z-30 border-b border-gray-300">
-        <div className="max-w-8xl mx-auto px-6 lg:px-8 py-6">
+        <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6">
           <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-3 sm:space-x-4">
               <button
                 onClick={() => setSidebarOpen(true)}
                 className="p-2 rounded-lg hover:bg-gray-200 transition-colors focus-ring"
               >
-                <Menu className="w-6 h-6 text-gray-600" />
+                <Menu className="w-5 h-5 sm:w-6 sm:h-6 text-gray-600" />
               </button>
-              <div className="w-12 h-12 bg-gradient-to-br from-secondary-500 to-accent-500 rounded-xl flex items-center justify-center shadow-lg neon-glow">
-                <Brain className="w-6 h-6 text-white" />
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-secondary-500 to-accent-500 rounded-xl flex items-center justify-center shadow-lg neon-glow">
+                <Brain className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
               </div>
-              <div>
+              <div className="hidden sm:block">
                 <h1 className="text-heading-2 text-gray-900 font-semibold">Creativity In Vitro</h1>
                 <p className="text-body-sm text-gray-600">Le Wagon Demo Day</p>
+              </div>
+              <div className="sm:hidden">
+                <h1 className="text-heading-3 text-gray-900 font-semibold">CinV</h1>
+                <p className="text-caption text-gray-600">Demo Day</p>
               </div>
             </div>
             <div className="flex items-center space-x-4">
@@ -1699,25 +1703,25 @@ const App = () => {
         </div>
       </header>
 
-      {/* Main Content */}
-      <main className={`max-w-8xl mx-auto px-6 lg:px-8 py-12 transition-all duration-300 ${sidebarOpen ? 'md:ml-80' : ''
+      {/* Main Content - Responsive */}
+      <main className={`max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-12 transition-all duration-300 ${sidebarOpen ? 'sm:ml-80' : ''
         }`}>
-        <div className="card border-0 shadow-2xl overflow-hidden min-h-[700px] glass-effect">
+        <div className="card border-0 shadow-2xl overflow-hidden min-h-[500px] sm:min-h-[700px] glass-effect">
           {/* Progress Indicators */}
-          <div className="glass-effect px-8 py-6 border-b border-gray-300">
-            <div className="flex justify-center space-x-3">
+          <div className="glass-effect px-4 sm:px-8 py-4 sm:py-6 border-b border-gray-300">
+            <div className="flex justify-center space-x-2 sm:space-x-3">
               {slides.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => goToSlide(index)}
-                  className={`w-3 h-3 rounded-full transition-all duration-300 focus-ring ${index === currentSlide
+                  className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 focus-ring ${index === currentSlide
                       ? 'bg-secondary-500 scale-125 shadow-lg neon-glow'
                       : 'bg-gray-300 hover:bg-gray-400 hover:scale-110'
                     }`}
                 />
               ))}
             </div>
-            <div className="progress-bar mt-4 max-w-md mx-auto">
+            <div className="progress-bar mt-3 sm:mt-4 max-w-md mx-auto">
               <div
                 className="progress-fill"
                 style={{ width: `${((currentSlide + 1) / slides.length) * 100}%` }}
@@ -1725,33 +1729,33 @@ const App = () => {
             </div>
           </div>
 
-          {/* Slide Content */}
-          <div className="p-8 lg:p-16">
-            <div className="mb-12 text-center">
-              <h2 className="text-display text-gray-900 mb-4 animate-slide-in">
+          {/* Slide Content - Responsive */}
+          <div className="p-4 sm:p-8 lg:p-16">
+            <div className="mb-8 sm:mb-12 text-center">
+              <h2 className="text-heading-1 sm:text-display text-gray-900 mb-3 sm:mb-4 animate-slide-in">
                 {slides[currentSlide].title}
               </h2>
-              <p className="text-body-lg text-gray-600 animate-slide-in">{slides[currentSlide].subtitle}</p>
+              <p className="text-body sm:text-body-lg text-gray-600 animate-slide-in">{slides[currentSlide].subtitle}</p>
             </div>
 
-            <div className="min-h-[500px]">
+            <div className="min-h-[400px] sm:min-h-[500px]">
               {slides[currentSlide].content}
             </div>
           </div>
 
-          {/* Navigation */}
-          <div className="glass-effect px-8 py-8 flex items-center justify-between border-t border-gray-300">
+          {/* Navigation - Responsive */}
+          <div className="glass-effect px-4 sm:px-8 py-6 sm:py-8 flex items-center justify-between border-t border-gray-300">
             <button
               onClick={prevSlide}
               disabled={currentSlide === 0}
               className={`btn ${currentSlide === 0 ? 'btn-ghost opacity-50 cursor-not-allowed' : 'btn-ghost hover:bg-gray-200'} focus-ring`}
             >
-              <ChevronLeft className="w-5 h-5" />
-              <span>Anterior</span>
+              <ChevronLeft className="w-4 h-4 sm:w-5 sm:h-5" />
+              <span className="hidden sm:inline">Anterior</span>
             </button>
 
             <div className="text-caption text-gray-500">
-              Etapa {currentSlide + 1} de {slides.length}
+              {currentSlide + 1} de {slides.length}
             </div>
 
             <button
@@ -1759,8 +1763,8 @@ const App = () => {
               disabled={currentSlide === slides.length - 1}
               className={`btn ${currentSlide === slides.length - 1 ? 'btn-ghost opacity-50 cursor-not-allowed' : 'btn-primary'} focus-ring`}
             >
-              <span>Próxima</span>
-              <ChevronRight className="w-5 h-5" />
+              <span className="hidden sm:inline">Próxima</span>
+              <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5" />
             </button>
           </div>
         </div>
