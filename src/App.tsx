@@ -572,9 +572,9 @@ const App = () => {
       )
     },
     {
-      id: 3,
+      id: 2,
       title: "Dados Brutos",
-      subtitle: "Captura EEG",
+      subtitle: "Eletroencefalograma (EEG)",
       icon: Database,
       content: (
         <div className="space-y-12 animate-fade-in">
@@ -586,8 +586,8 @@ const App = () => {
               </div>
               <div>
                 <h2 className="text-heading-1 text-gray-900 mb-2">Dados Brutos</h2>
-                <p className="text-body-lg text-gray-800 mb-2">Captura EEG</p>
-                <p className="text-body text-gray-700">Sinais EEG de 8 canais durante audição das instruções "Sun on the Face" and "Relax"</p>
+                <p className="text-body-lg text-gray-800 mb-2">Aquisição de dados de EEG / Capacete Neural</p>
+                <p className="text-body text-gray-700">Sinais EEG de 8 eletrodos/canais durante audição das instruções "Sun on the Face" and "Relax"</p>
               </div>
             </div>
 
@@ -679,9 +679,9 @@ const App = () => {
       )
     },
     {
-      id: 2,
-      title: "Filtragem e Normalização",
-      subtitle: "Processamento de Sinais",
+      id: 3,
+      title: "Pré-Processamento",
+      subtitle: "Filtragem de Sinais",
       icon: BarChart3,
       content: (
         <div className="space-y-12 animate-fade-in">
@@ -693,8 +693,8 @@ const App = () => {
               </div>
               <div>
                 <h2 className="text-heading-1 text-gray-900 mb-2">Filtragem</h2>
-                <p className="text-body-lg text-gray-800 mb-2">Processamento de Sinais</p>
-                <p className="text-body text-gray-700">Filtragem dos sinais EEG para remoção de ruído e isolamento das bandas de frequência relevantes à atividade neural</p>
+                <p className="text-body-lg text-gray-800 mb-2">Normalização de Sinais</p>
+                <p className="text-body text-gray-700">Filtragem dos 8 canais EEG para remoção de ruído <br />e isolamento das bandas de frequência relevantes à atividade neural</p>
               </div>
             </div>
 
@@ -740,7 +740,7 @@ const App = () => {
                 className="w-full h-auto rounded-lg shadow-lg"
               />
               <p className="text-body-sm text-gray-600 mt-4 text-center italic">
-                Impacto de piscadas na captação ondulatória do Canal FP1, responsável pela Atividade frontal / Artefato Ocular.
+                Exemplo de canal com os dados brutos antes da filtragem.
               </p>
             </div>
 
@@ -752,7 +752,7 @@ const App = () => {
                 className="w-full h-auto rounded-lg shadow-lg"
               />
               <p className="text-body-sm text-gray-600 mt-4 text-center italic">
-                Sinal FP1 após filtração e normalização. Processamento aplicado para remoção de artefatos e melhoria da qualidade do sinal.
+                Sinal após filtração e normalização. Processamento aplicado para remoção de ruído e "drift".
               </p>
             </div>
           </div>
@@ -760,7 +760,7 @@ const App = () => {
       )
     },
     {
-      id: 5,
+      id: 4,
       title: "Remoção de Artefatos",
       subtitle: "Eliminação de ruídos fisiológicos, como movimentos oculares (piscadas) e variações de condutividade devido ao suor, preservando a atividade neural limpa para análise.",
       icon: Eye,
@@ -769,13 +769,13 @@ const App = () => {
           {/* Header Section - Full Width */}
           <div className="card p-12 border-0 shadow-xl glass-effect">
             <div className="flex items-center mb-8">
-              <div className="w-16 h-16 bg-accent-500 text-white rounded-2xl flex items-center justify-center font-bold mr-6 shadow-lg neon-glow">
+            <div className="w-16 h-16 bg-accent-500 text-white rounded-2xl flex items-center justify-center font-bold mr-6 shadow-lg neon-glow">
                 4
               </div>
               <div>
                 <h2 className="text-heading-1 text-gray-900 mb-2">Limpeza da Base de Dados Bruta</h2>
                 <p className="text-body-lg text-gray-800 mb-2">Remoção de artefatos e preparação do sinal para análise</p>
-                <p className="text-body text-gray-700">Quando trabalhamos com sinais brutos de EEG, é essencial remover artefatos fisiológicos — como piscadas, movimentos musculares ou ruídos causados por suor. Para isso, utilizamos a técnica de Decomposição em Componentes Independentes (ICA), que nos permite separar e identificar sinais não neurais. Após a limpeza, o sinal fica pronto para a extração de características relevantes.</p>
+                <p className="text-body text-gray-700">Quando trabalhamos com sinais brutos de EEG, é essencial remover artefatos fisiológicos <br /> como piscadas, movimentos musculares ou ruídos causados por suor. </p>
               </div>
             </div>
 
@@ -804,7 +804,7 @@ const App = () => {
                   <div className="w-12 h-12 bg-accent-100 rounded-xl flex items-center justify-center mx-auto mb-4">
                     <TrendingUp className="w-6 h-6 text-accent-600" />
                   </div>
-                  <h4 className="text-heading-3 text-gray-900 mb-2">Pré-processamento Final</h4>
+                  <h4 className="text-heading-3 text-gray-900 mb-2">Limpeza Final</h4>
                   <p className="text-body-sm text-gray-700">Resulta em um sinal limpo e pronto para extração de features</p>
                 </div>
               </div>
@@ -837,13 +837,13 @@ const App = () => {
           {/* Header Section - Full Width */}
           <div className="card p-12 border-0 shadow-xl glass-effect">
             <div className="flex items-center mb-8">
-              <div className="w-16 h-16 bg-accent-500 text-white rounded-2xl flex items-center justify-center font-bold mr-6 shadow-lg neon-glow">
+              <div className="w-16 h-16 bg-secondary-500 text-white rounded-2xl flex items-center justify-center font-bold mr-6 shadow-lg neon-glow">
                 5
               </div>
               <div>
                 <h2 className="text-heading-1 text-gray-900 mb-2">Análise de Features</h2>
                 <p className="text-body-lg text-gray-800 mb-2">Engenharia de características multiescalares</p>
-                <p className="text-body text-gray-700">Após a limpeza do sinal EEG, extraímos características relevantes para que os modelos consigam aprender padrões de atividade cerebral.</p>
+                <p className="text-body text-gray-700">Após a limpeza do sinal EEG, extraímos características relevantes <br /> para que os modelos consigam aprender padrões de atividade cerebral.</p>
               </div>
             </div>
 
@@ -853,24 +853,24 @@ const App = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="card p-6 border-0 shadow-lg glass-effect text-center">
-                  <div className="w-12 h-12 bg-accent-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <Eye className="w-6 h-6 text-accent-600" />
+                  <div className="w-12 h-12 bg-secondary-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <Eye className="w-6 h-6 text-secondary-600" />
                   </div>
                   <h4 className="text-heading-3 text-gray-900 mb-2">Band Power</h4>
                   <p className="text-body-sm text-gray-700">Cálculo da energia em bandas delta, teta, alfa, beta e gama</p>
                 </div>
 
                 <div className="card p-6 border-0 shadow-lg glass-effect text-center">
-                  <div className="w-12 h-12 bg-accent-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <BarChart3 className="w-6 h-6 text-accent-600" />
+                  <div className="w-12 h-12 bg-secondary-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <BarChart3 className="w-6 h-6 text-secondary-600" />
                   </div>
-                  <h4 className="text-heading-3 text-gray-900 mb-2">Parâmetros de Hjorth</h4>
+                  <h4 className="text-heading-3 text-gray-900 mb-2">Hjorth</h4>
                   <p className="text-body-sm text-gray-700">Medidas de variação e complexidade no domínio do tempo</p>
                 </div>
 
                 <div className="card p-6 border-0 shadow-lg glass-effect text-center">
-                  <div className="w-12 h-12 bg-accent-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <TrendingUp className="w-6 h-6 text-accent-600" />
+                  <div className="w-12 h-12 bg-secondary-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <TrendingUp className="w-6 h-6 text-secondary-600" />
                   </div>
                   <h4 className="text-heading-3 text-gray-900 mb-2">Wavelet Features</h4>
                   <p className="text-body-sm text-gray-700">Extração de padrões multiescalares com transformada wavelet</p>
