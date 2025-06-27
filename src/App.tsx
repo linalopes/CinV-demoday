@@ -1149,19 +1149,15 @@ const App = () => {
               <div className="space-y-4">
                 <div className="flex items-start">
                 <div className="status-dot status-warning mt-2 mr-4 flex-shrink-0"></div>
-                  <span className="text-body text-gray-700">Segmentação: Média temporal por canal dentro de cada instrução</span>
+                  <span className="text-body text-gray-700">O treinamento foi feito com média temporal por canal em cada instrução.</span>
                 </div>
                 <div className="flex items-start">
                 <div className="status-dot status-warning mt-2 mr-4 flex-shrink-0"></div>
-                  <span className="text-body text-gray-700">Melhores Parâmetros: Hjorth + Wavelet</span>
+                  <span className="text-body text-gray-700">O modelo usou os melhores parâmetros extraídos por Hjorth + Wavelet.</span>
                 </div>
                 <div className="flex items-start">
                   <div className="status-dot status-warning mt-2 mr-4 flex-shrink-0"></div>
-                  <span className="text-body text-gray-700">Avaliação: 5-Fold CV</span>
-                </div>
-                <div className="flex items-start">
-                  <div className="status-dot status-warning mt-2 mr-4 flex-shrink-0"></div>
-                  <span className="text-body text-gray-700">Verificação contra over-fitting: Hold-Out</span>
+                  <span className="text-body text-gray-700">A avaliação principal foi feita por 5-fold cross-validation, com verificação extra via hold-out para evitar overfitting.</span>
                 </div>
               </div>
             </div>
@@ -1171,11 +1167,11 @@ const App = () => {
               <div className="space-y-4">
                 <div className="flex items-start">
                   <div className="status-dot status-warning mt-2 mr-4 flex-shrink-0"></div>
-                  <span className="text-body text-gray-700">Imaginar o Sol no rosto</span>
+                  <span className="text-body text-gray-700">O modelo identifica com precisão quando o cérebro está em imaginação ativa e acerta com mais confiança quando há intenção.</span>
                 </div>
                 <div className="flex items-start">
                   <div className="status-dot status-warning mt-2 mr-4 flex-shrink-0"></div>
-                  <span className="text-body text-gray-700">Relaxamento</span>
+                  <span className="text-body text-gray-700">Estados de relaxamento ainda apresentam sobreposição com foco leve, mas a separação é clara na maioria dos casos.</span>
                 </div>
               </div>
             </div>
