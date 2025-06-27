@@ -121,6 +121,37 @@ const App = () => {
       U --> V[Opção de exportar chat em JSON]
   `;
 
+  const diagramEEGNet = `
+    graph TD
+      Input["Input EEG<br/>(batch, channels, samples)"]
+      Expand["Unsqueeze → (batch, 1, channels, samples)"]
+
+      Conv1["Conv2D (1→4), kernel=(1×64), padding=(0,32)"]
+      BN1["BatchNorm2D (4)"]
+      ELU1["ELU activation"]
+
+      Depthwise["Depthwise Conv2D (4→8), kernel=(channels×1), groups=4"]
+      BN2["BatchNorm2D (8)"]
+      ELU2["ELU"]
+      Pool1["AvgPool2D (1×4)"]
+      Drop1["Dropout 0.5"]
+
+      Sep["Separable Conv2D (1×16), padding=(0,8)"]
+      BN3["BatchNorm2D (8)"]
+      ELU3["ELU"]
+      Pool2["AvgPool2D (1×4)"]
+      Drop2["Dropout 0.5"]
+
+      Flatten["Flatten"]
+      FC["Linear → n_classes"]
+      Output["Output logits"]
+
+      Input --> Expand --> Conv1 --> BN1 --> ELU1
+      ELU1 --> Depthwise --> BN2 --> ELU2 --> Pool1 --> Drop1
+      Drop1 --> Sep --> BN3 --> ELU3 --> Pool2 --> Drop2
+      Drop2 --> Flatten --> FC --> Output
+  `;
+
 
   const slides = [
     {
@@ -572,7 +603,7 @@ const App = () => {
       )
     },
     {
-      id: 2,
+      id: 3,
       title: "Dados Brutos",
       subtitle: "Eletroencefalograma (EEG)",
       icon: Database,
@@ -679,7 +710,7 @@ const App = () => {
       )
     },
     {
-      id: 3,
+      id: 4,
       title: "Pré-Processamento",
       subtitle: "Filtragem de Sinais",
       icon: BarChart3,
@@ -760,7 +791,7 @@ const App = () => {
       )
     },
     {
-      id: 4,
+      id: 5,
       title: "Remoção de Artefatos",
       subtitle: "Eliminação de ruídos fisiológicos, como movimentos oculares (piscadas) e variações de condutividade devido ao suor, preservando a atividade neural limpa para análise.",
       icon: Eye,
@@ -770,7 +801,7 @@ const App = () => {
           <div className="card p-12 border-0 shadow-xl glass-effect">
             <div className="flex items-center mb-8">
             <div className="w-16 h-16 bg-accent-500 text-white rounded-2xl flex items-center justify-center font-bold mr-6 shadow-lg neon-glow">
-                4
+                3
               </div>
               <div>
                 <h2 className="text-heading-1 text-gray-900 mb-2">Limpeza da Base de Dados Bruta</h2>
@@ -838,7 +869,7 @@ const App = () => {
           <div className="card p-12 border-0 shadow-xl glass-effect">
             <div className="flex items-center mb-8">
               <div className="w-16 h-16 bg-secondary-500 text-white rounded-2xl flex items-center justify-center font-bold mr-6 shadow-lg neon-glow">
-                5
+                4
               </div>
               <div>
                 <h2 className="text-heading-1 text-gray-900 mb-2">Análise de Features</h2>
@@ -906,12 +937,12 @@ const App = () => {
           {/* Primeiro Modelo */}
           <div className="card p-12 border-0 shadow-xl glass-effect">
             <div className="flex items-center mb-8">
-              <div className="w-16 h-16 bg-success-500 text-white rounded-2xl flex items-center justify-center font-bold mr-6 shadow-lg neon-glow">
-                6
+              <div className="w-16 h-16 bg-accent-500 text-white rounded-2xl flex items-center justify-center font-bold mr-6 shadow-lg neon-glow">
+                5
               </div>
               <div>
-                <h2 className="text-heading-1 text-gray-900 mb-2">Modelo (Deep Learning - EEG NetCustom)</h2>
-                <p className="text-body-lg text-gray-800 mb-2">Arquitetura Neural</p>
+                <h2 className="text-heading-1 text-gray-900 mb-2">Deep Learning</h2>
+                <p className="text-body-lg text-gray-800 mb-2">EEG NetCustom</p>
                 <p className="text-body text-gray-700">Rede neural convolucional especializada para processamento de sinais EEG</p>
               </div>
             </div>
@@ -920,40 +951,40 @@ const App = () => {
               <h3 className="text-heading-2 text-gray-900 mb-8">Principais Atividades:</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div className="card p-6 border-0 shadow-lg glass-effect text-center">
-                  <div className="w-12 h-12 bg-success-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <Brain className="w-6 h-6 text-success-600" />
+                  <div className="w-12 h-12 bg-accent-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <Brain className="w-6 h-6 text-accent-600" />
                   </div>
-                  <h4 className="text-heading-3 text-gray-900 mb-2">EEGNet CNN</h4>
-                  <p className="text-body-sm text-gray-700">Arquitetura especializada para EEG</p>
+                  <h4 className="text-heading-3 text-gray-900 mb-2">Sem parâmetros</h4>
+                  <p className="text-body-sm text-gray-700">Modelo "sujo" sem seleção de parâmetros especializados para a tarefa de classificação</p>
                 </div>
                 <div className="card p-6 border-0 shadow-lg glass-effect text-center">
-                  <div className="w-12 h-12 bg-success-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <Settings className="w-6 h-6 text-success-600" />
+                  <div className="w-12 h-12 bg-accent-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <Settings className="w-6 h-6 text-accent-600" />
                   </div>
-                  <h4 className="text-heading-3 text-gray-900 mb-2">Otimização</h4>
-                  <p className="text-body-sm text-gray-700">Ajuste de hiperparâmetros</p>
+                  <h4 className="text-heading-3 text-gray-900 mb-2">Divisão dos Dados</h4>
+                  <p className="text-body-sm text-gray-700">Janelas deslizantes de 2s com sopreposição de 0,5s</p>
                 </div>
                 <div className="card p-6 border-0 shadow-lg glass-effect text-center">
-                  <div className="w-12 h-12 bg-success-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <TrendingUp className="w-6 h-6 text-success-600" />
+                  <div className="w-12 h-12 bg-accent-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <TrendingUp className="w-6 h-6 text-accent-600" />
                   </div>
                   <h4 className="text-heading-3 text-gray-900 mb-2">Validação</h4>
-                  <p className="text-body-sm text-gray-700">Cross-validation e métricas</p>
+                  <p className="text-body-sm text-gray-700">Validação com dados separados, monitorando desempenho a cada epoch para evitar overfitting</p>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Placeholder Primeiro Modelo */}
+          {/* Mermaid Primeiro Modelo */}
           <div className="space-y-8">
             <div className="card p-12 border-0 shadow-xl glass-effect text-center">
-              <div className="w-20 h-20 bg-success-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <Brain className="w-10 h-10 text-success-500" />
+              <div className="w-20 h-20 bg-accent-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <Brain className="w-10 h-10 text-accent-500" />
               </div>
               <h4 className="text-heading-2 text-gray-900 mb-4">Arquitetura EEGNet CNN</h4>
               <p className="text-body text-gray-600 mb-8">Visualização da arquitetura da rede neural convolucional especializada para processamento de sinais EEG</p>
               <div className="bg-gray-100 rounded-lg p-16 border-2 border-dashed border-gray-300">
-                <p className="text-body-sm text-gray-500">Placeholder para diagrama da arquitetura EEGNet CNN</p>
+              <div className="mermaid flex justify-center" dangerouslySetInnerHTML={{ __html: diagramEEGNet }} />
               </div>
             </div>
           </div>
@@ -961,83 +992,116 @@ const App = () => {
           {/* Segundo Modelo (igual ao primeiro, pronto para editar) */}
           <div className="card p-12 border-0 shadow-xl glass-effect">
             <div className="flex items-center mb-8">
-              <div className="w-16 h-16 bg-success-500 text-white rounded-2xl flex items-center justify-center font-bold mr-6 shadow-lg neon-glow">
-                7
-              </div>
               <div>
-                <h2 className="text-heading-1 text-gray-900 mb-2">Modelo (Deep Learning - Segundo Exemplo)</h2>
-                <p className="text-body-lg text-gray-800 mb-2">Nova Arquitetura Neural</p>
-                <p className="text-body text-gray-700">Descrição do segundo modelo a ser exibido</p>
+                <h2 className="text-heading-1 text-gray-900 mb-2">Resultados</h2>
+                <p className="text-body-lg text-gray-800 mb-2">Perfomance do Modelo</p>
+                <p className="text-body text-gray-700">Descrição dos resultados obtidos com o modelo EEGNet CNN</p>
               </div>
             </div>
-            {/* Principais Atividades */}
+            {/* Principais Métricas Section */}
             <div className="mb-8">
-              <h3 className="text-heading-2 text-gray-900 mb-8">Principais Atividades:</h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <h3 className="text-heading-2 text-gray-900 mb-8">Principais Métricas:</h3>
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div className="card p-6 border-0 shadow-lg glass-effect text-center">
-                  <div className="w-12 h-12 bg-success-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <Brain className="w-6 h-6 text-success-600" />
+                  <div className="w-12 h-12 bg-accent-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <TrendingUp className="w-6 h-6 text-accent-600" />
                   </div>
-                  <h4 className="text-heading-3 text-gray-900 mb-2">Camada Convolucional</h4>
-                  <p className="text-body-sm text-gray-700">Filtro espacial e temporal</p>
+                  <h4 className="text-heading-3 text-gray-900 mb-2">80,9%</h4>
+                  <p className="text-body-sm text-gray-700">Val balanced acc</p>
                 </div>
+
                 <div className="card p-6 border-0 shadow-lg glass-effect text-center">
-                  <div className="w-12 h-12 bg-success-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <Settings className="w-6 h-6 text-success-600" />
+                  <div className="w-12 h-12 bg-accent-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <BarChart3 className="w-6 h-6 text-accent-600" />
                   </div>
-                  <h4 className="text-heading-3 text-gray-900 mb-2">Regularização</h4>
-                  <p className="text-body-sm text-gray-700">Dropout e batch norm</p>
+                  <h4 className="text-heading-3 text-gray-900 mb-2">64,6%</h4>
+                  <p className="text-body-sm text-gray-700">Test balanced acc</p>
                 </div>
+
                 <div className="card p-6 border-0 shadow-lg glass-effect text-center">
-                  <div className="w-12 h-12 bg-success-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <TrendingUp className="w-6 h-6 text-success-600" />
+                  <div className="w-12 h-12 bg-accent-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <Eye className="w-6 h-6 text-accent-600" />
                   </div>
-                  <h4 className="text-heading-3 text-gray-900 mb-2">Avaliação</h4>
-                  <p className="text-body-sm text-gray-700">Métricas de performance</p>
+                  <h4 className="text-heading-3 text-gray-900 mb-2">65,0%</h4>
+                  <p className="text-body-sm text-gray-700">Accuracy</p>
+                </div>
+
+                <div className="card p-6 border-0 shadow-lg glass-effect text-center">
+                  <div className="w-12 h-12 bg-accent-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <Target className="w-6 h-6 text-accent-600" />
+                  </div>
+                  <h4 className="text-heading-3 text-gray-900 mb-2">68%</h4>
+                  <p className="text-body-sm text-gray-700">F1 sun_block</p>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Placeholder Segundo Modelo */}
-          <div className="space-y-8">
-            <div className="card p-12 border-0 shadow-xl glass-effect text-center">
-              <div className="w-20 h-20 bg-success-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                <Brain className="w-10 h-10 text-success-500" />
-              </div>
-              <h4 className="text-heading-2 text-gray-900 mb-4">Arquitetura Exemplo 2</h4>
-              <p className="text-body text-gray-600 mb-8">Visualização da segunda arquitetura de rede</p>
-              <div className="bg-gray-100 rounded-lg p-16 border-2 border-dashed border-gray-300">
-                <p className="text-body-sm text-gray-500">Placeholder para diagrama da arquitetura do segundo modelo</p>
-              </div>
+          <div className="card p-8 border-0 shadow-xl glass-effect">
+              <img
+                src="/EEGNetCustom.png"
+                alt="Análise de Componentes Independentes (ICA) dos sinais EEG"
+                className="w-half h-auto rounded-lg shadow-lg mx-auto"
+              />
+              <p className="text-body-sm text-gray-600 mt-4 text-center italic">
+                Matriz de Confusão da predição dos dois estados mentais: Sol no rosto e relaxamento.
+              </p>
             </div>
-          </div>
         </div>
       )
     },
     {
       id: 8,
-      title: "Resultados",
-      subtitle: "Performance do Modelo",
+      title: "Modelo de Aprendizado",
+      subtitle: "Aplicação de Arquiteturas Clássicas",
       icon: TrendingUp,
       content: (
         <div className="space-y-12 animate-fade-in">
           {/* Header Section - Full Width */}
           <div className="card p-12 border-0 shadow-xl glass-effect">
             <div className="flex items-center mb-8">
-              <div className="w-16 h-16 bg-warning-500 text-white rounded-2xl flex items-center justify-center font-bold mr-6 shadow-lg neon-glow">
+              <div className="w-16 h-16 bg-secondary-500 text-white rounded-2xl flex items-center justify-center font-bold mr-6 shadow-lg neon-glow">
                 7
               </div>
               <div>
-                <h2 className="text-heading-1 text-gray-900 mb-2">Resultados</h2>
-                <p className="text-body-lg text-gray-800 mb-2">Performance do Modelo</p>
+                <h2 className="text-heading-1 text-gray-900 mb-2">Modelos Clássicos de Machine Learning</h2>
+                <p className="text-body-lg text-gray-800 mb-2">Performance </p>
                 <p className="text-body text-gray-700">Análise detalhada dos resultados obtidos com o modelo EEGNet CNN</p>
+              </div>
+            </div>
+            {/* Principais Atividades */}
+            <div className="mb-8">
+              <h3 className="text-heading-2 text-gray-900 mb-8">Principais Modelos:</h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="card p-6 border-0 shadow-lg glass-effect text-center">
+                  <div className="w-12 h-12 bg-secondary-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <Settings className="w-6 h-6 text-secondary-600" />
+                  </div>
+                  <h4 className="text-heading-3 text-gray-900 mb-2">Logistic Regression</h4>
+                  <p className="text-body-sm text-gray-700">Modelo "sujo" sem seleção de parâmetros especializados para a tarefa de classificação</p>
+                </div>
+                <div className="card p-6 border-0 shadow-lg glass-effect text-center">
+                  <div className="w-12 h-12 bg-secondary-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <Settings className="w-6 h-6 text-secondary-600" />
+                  </div>
+                  <h4 className="text-heading-3 text-gray-900 mb-2">Random Forest</h4>
+                  <p className="text-body-sm text-gray-700">Janelas deslizantes de 2s com sopreposição de 0,5s</p>
+                </div>
+                <div className="card p-6 border-0 shadow-lg glass-effect text-center">
+                  <div className="w-12 h-12 bg-secondary-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <Settings className="w-6 h-6 text-secondary-600" />
+                  </div>
+                  <h4 className="text-heading-3 text-gray-900 mb-2">LightGBM</h4>
+                  <p className="text-body-sm text-gray-700">Validação com dados separados, monitorando desempenho a cada epoch para evitar overfitting</p>
+                </div>
               </div>
             </div>
 
             {/* Principais Métricas Section */}
             <div className="mb-8">
-              <h3 className="text-heading-2 text-gray-900 mb-8">Principais Métricas:</h3>
+              <h3 className="text-heading-2 text-gray-900 mb-8">Principais Métricas do LightGBM:</h3>
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div className="card p-6 border-0 shadow-lg glass-effect text-center">
