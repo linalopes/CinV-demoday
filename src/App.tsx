@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, Database, Brain, Zap, Activity, Users, Lightbulb, ArrowRight, Play, Pause, BarChart3, TrendingUp, Eye, Accessibility, Target, Settings, FileText, Music, Headphones, Clock, Search, BookOpen, Cpu, Menu, X } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Database, Brain, Zap, Activity, Users, Lightbulb, ArrowRight, Play, Pause, BarChart3, TrendingUp, Eye, Accessibility, Target, Settings, FileText, Music, Headphones, Clock, Search, BookOpen, Cpu, Menu, X, Computer } from 'lucide-react';
 
 const App = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -1080,21 +1080,24 @@ const App = () => {
                     <Settings className="w-6 h-6 text-secondary-600" />
                   </div>
                   <h4 className="text-heading-3 text-gray-900 mb-2">Logistic Regression</h4>
-                  <p className="text-body-sm text-gray-700">Modelo "sujo" sem seleção de parâmetros especializados para a tarefa de classificação</p>
+                  <p className="text-body-sm text-gray-700">Accuracy: 0.900 ± 0.062</p>
+                  <p className="text-body-sm text-gray-700">Acertou bem, pequeno erro no `rest` class</p>
                 </div>
                 <div className="card p-6 border-0 shadow-lg glass-effect text-center">
                   <div className="w-12 h-12 bg-secondary-100 rounded-xl flex items-center justify-center mx-auto mb-4">
                     <Settings className="w-6 h-6 text-secondary-600" />
                   </div>
                   <h4 className="text-heading-3 text-gray-900 mb-2">Random Forest</h4>
-                  <p className="text-body-sm text-gray-700">Janelas deslizantes de 2s com sopreposição de 0,5s</p>
+                  <p className="text-body-sm text-gray-700">Accuracy: 0.967 ± 0.041</p>
+                  <p className="text-body-sm text-gray-700">Excelente, AUC 1.0 no hold-out</p>
                 </div>
                 <div className="card p-6 border-0 shadow-lg glass-effect text-center">
                   <div className="w-12 h-12 bg-secondary-100 rounded-xl flex items-center justify-center mx-auto mb-4">
                     <Settings className="w-6 h-6 text-secondary-600" />
                   </div>
                   <h4 className="text-heading-3 text-gray-900 mb-2">LightGBM</h4>
-                  <p className="text-body-sm text-gray-700">Validação com dados separados, monitorando desempenho a cada epoch para evitar overfitting</p>
+                  <p className="text-body-sm text-gray-700">Accuracy: 0.983 ± 0.033</p>
+                  <p className="text-body-sm text-gray-700">Melhor modelo até agora, sem overfitting</p>
                 </div>
               </div>
             </div>
@@ -1105,34 +1108,34 @@ const App = () => {
 
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div className="card p-6 border-0 shadow-lg glass-effect text-center">
-                  <div className="w-12 h-12 bg-warning-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <TrendingUp className="w-6 h-6 text-warning-600" />
+                  <div className="w-12 h-12 bg-accent-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <TrendingUp className="w-6 h-6 text-accent-600" />
                   </div>
-                  <h4 className="text-heading-3 text-gray-900 mb-2">74,8%</h4>
+                  <h4 className="text-heading-3 text-gray-900 mb-2">98,3%</h4>
                   <p className="text-body-sm text-gray-700">Val balanced acc</p>
                 </div>
 
                 <div className="card p-6 border-0 shadow-lg glass-effect text-center">
-                  <div className="w-12 h-12 bg-warning-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <BarChart3 className="w-6 h-6 text-warning-600" />
+                  <div className="w-12 h-12 bg-accent-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <BarChart3 className="w-6 h-6 text-accent-600" />
                   </div>
-                  <h4 className="text-heading-3 text-gray-900 mb-2">58,9%</h4>
+                  <h4 className="text-heading-3 text-gray-900 mb-2">99,9%</h4>
                   <p className="text-body-sm text-gray-700">Test balanced acc</p>
                 </div>
 
                 <div className="card p-6 border-0 shadow-lg glass-effect text-center">
-                  <div className="w-12 h-12 bg-warning-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <Eye className="w-6 h-6 text-warning-600" />
+                  <div className="w-12 h-12 bg-accent-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <Eye className="w-6 h-6 text-accent-600" />
                   </div>
-                  <h4 className="text-heading-3 text-gray-900 mb-2">61%</h4>
+                  <h4 className="text-heading-3 text-gray-900 mb-2">98%</h4>
                   <p className="text-body-sm text-gray-700">Accuracy</p>
                 </div>
 
                 <div className="card p-6 border-0 shadow-lg glass-effect text-center">
-                  <div className="w-12 h-12 bg-warning-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <Target className="w-6 h-6 text-warning-600" />
+                  <div className="w-12 h-12 bg-accent-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    <Target className="w-6 h-6 text-accent-600" />
                   </div>
-                  <h4 className="text-heading-3 text-gray-900 mb-2">68%</h4>
+                  <h4 className="text-heading-3 text-gray-900 mb-2">100%</h4>
                   <p className="text-body-sm text-gray-700">F1 sun_block</p>
                 </div>
               </div>
@@ -1142,26 +1145,37 @@ const App = () => {
           {/* Análise Detalhada */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="card p-8 border-0 shadow-lg glass-effect">
-              <h3 className="text-heading-2 text-gray-900 mb-6">Interpretação</h3>
+              <h3 className="text-heading-2 text-gray-900 mb-6">Treino e Teste</h3>
               <div className="space-y-4">
                 <div className="flex items-start">
-                  <div className="status-dot status-success mt-2 mr-4 flex-shrink-0"></div>
-                  <span className="text-body text-gray-700">O modelo mantém boa generalização, mesmo após 77 épocas — isso mostra que os 40 features selecionados ajudam a estabilizar o treino.</span>
-
+                <div className="status-dot status-warning mt-2 mr-4 flex-shrink-0"></div>
+                  <span className="text-body text-gray-700">Segmentação: Média temporal por canal dentro de cada instrução</span>
+                </div>
+                <div className="flex items-start">
+                <div className="status-dot status-warning mt-2 mr-4 flex-shrink-0"></div>
+                  <span className="text-body text-gray-700">Melhores Parâmetros: Hjorth + Wavelet</span>
+                </div>
+                <div className="flex items-start">
+                  <div className="status-dot status-warning mt-2 mr-4 flex-shrink-0"></div>
+                  <span className="text-body text-gray-700">Avaliação: 5-Fold CV</span>
+                </div>
+                <div className="flex items-start">
+                  <div className="status-dot status-warning mt-2 mr-4 flex-shrink-0"></div>
+                  <span className="text-body text-gray-700">Verificação contra over-fitting: Hold-Out</span>
                 </div>
               </div>
             </div>
 
             <div className="card p-8 border-0 shadow-lg glass-effect">
-              <h3 className="text-heading-2 text-gray-900 mb-6">Áreas de Melhoria</h3>
+              <h3 className="text-heading-2 text-gray-900 mb-6">Interpretação</h3>
               <div className="space-y-4">
                 <div className="flex items-start">
                   <div className="status-dot status-warning mt-2 mr-4 flex-shrink-0"></div>
-                  <span className="text-body text-gray-700">Sun_block tem melhor performance, o que pode indicar maior regularidade no padrão imaginativo ou mais estabilidade cognitiva nesse estado.</span>
+                  <span className="text-body text-gray-700">Imaginar o Sol no rosto</span>
                 </div>
                 <div className="flex items-start">
                   <div className="status-dot status-warning mt-2 mr-4 flex-shrink-0"></div>
-                  <span className="text-body text-gray-700">Rest_block segue sendo mais difícil, talvez por variabilidade maior ou ruído interno (cansaço, movimento leve etc.)</span>
+                  <span className="text-body text-gray-700">Relaxamento</span>
                 </div>
               </div>
             </div>
@@ -1172,19 +1186,19 @@ const App = () => {
     {
       id: 9,
       title: "Aplicação Prática",
-      subtitle: "Interface Cérebro-Computador",
+      subtitle: "Interface Cérebro-Computador (BCI)",
       icon: Users,
       content: (
         <div className="space-y-12 animate-fade-in">
           {/* Header Section - Full Width */}
           <div className="card p-12 border-0 shadow-xl glass-effect">
             <div className="flex items-center mb-8">
-              <div className="w-16 h-16 bg-primary-500 text-white rounded-2xl flex items-center justify-center font-bold mr-6 shadow-lg neon-glow">
+              <div className="w-16 h-16 bg-accent-500 text-white rounded-2xl flex items-center justify-center font-bold mr-6 shadow-lg neon-glow">
                 8
               </div>
               <div>
                 <h2 className="text-heading-1 text-gray-900 mb-2">Aplicação Prática</h2>
-                <p className="text-body-lg text-gray-800 mb-2">Interface Cérebro-Computador</p>
+                <p className="text-body-lg text-gray-800 mb-2">Interface Cérebro-Computador (BCI)</p>
                 <p className="text-body text-gray-700">Implementação real do sistema para comunicação neural direta</p>
               </div>
             </div>
@@ -1230,7 +1244,7 @@ const App = () => {
 
             <div className="rounded-xl overflow-hidden shadow-lg border border-gray-300">
               <img
-                src="/3d-brain.gif"
+                src="/brain-2.gif"
                 alt="Visualização 3D da atividade cerebral em tempo real durante o processamento de sinais EEG para interface cérebro-computador"
                 className="w-full h-auto"
                 style={{ maxHeight: '500px', objectFit: 'contain' }}
@@ -1245,21 +1259,21 @@ const App = () => {
     },
     {
       id: 10,
-      title: "Limitações e Desafios de uma BCI Customizada para Comunicação Pessoal",
-      subtitle: "Reflexões críticas sobre os obstáculos técnicos, práticos e éticos de um sistema sob medida",
+      title: "Limitações e Desafios de uma BCI",
+      subtitle: "Reflexões sobre os obstáculos técnicos, práticos e éticos de um sistema sob medida",
       icon: Settings,
       content: (
         <div className="space-y-12 animate-fade-in">
           {/* Header Section - Full Width */}
           <div className="card p-12 border-0 shadow-xl glass-effect">
             <div className="flex items-center mb-8">
-              <div className="w-16 h-16 bg-error-500 text-white rounded-2xl flex items-center justify-center font-bold mr-6 shadow-lg neon-glow">
+              <div className="w-16 h-16 bg-secondary-500 text-white rounded-2xl flex items-center justify-center font-bold mr-6 shadow-lg neon-glow">
                 9
               </div>
               <div>
-                <h2 className="text-heading-1 text-gray-900 mb-2">Limitações e Desafios de uma BCI Customizada para Comunicação Pessoal</h2>
-                <p className="text-body-lg text-gray-800 mb-2">Reflexões críticas sobre os obstáculos técnicos, práticos e éticos de um sistema sob medida</p>
-                <p className="text-body text-gray-700">Análise crítica das limitações atuais e desafios a serem superados</p>
+                <h2 className="text-heading-1 text-gray-900 mb-2">Interface Cérebro-Computador (BCI)</h2>
+                <p className="text-body-lg text-gray-800 mb-2">Análise crítica das limitações atuais e desafios a serem superados</p>
+                <p className="text-body text-gray-700"></p>
               </div>
             </div>
 
@@ -1270,26 +1284,33 @@ const App = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="card p-6 border-0 shadow-lg glass-effect">
                   <div className="flex items-center mb-4">
-                    <div className="w-10 h-10 bg-error-100 rounded-lg flex items-center justify-center mr-3">
-                      <Settings className="w-5 h-5 text-error-600" />
+                    <div className="w-10 h-10 bg-secondary-100 rounded-lg flex items-center justify-center mr-3">
+                      <Settings className="w-5 h-5 text-secondary-600" />
                     </div>
                     <h4 className="text-heading-3 text-gray-900">Desafios Técnicos</h4>
                   </div>
                   <div className="space-y-3">
                     <div className="flex items-start">
-                      <div className="status-dot status-error mt-2 mr-3 flex-shrink-0"></div>
+                      {/* Available status color classes:
+                        status-error (red)
+                        status-success (green)
+                        status-warning (yellow/orange)
+                        status-info (blue)
+                        status-neutral (gray)
+                      */}
+                      <div className="status-dot status-neutral mt-2 mr-3 flex-shrink-0" style={{backgroundColor: '#6B7280'}}></div>
                       <span className="text-body-sm text-gray-700">Variabilidade entre usuários: os sinais EEG variam muito de pessoa para pessoa, exigindo treino individual.</span>
                     </div>
                     <div className="flex items-start">
-                      <div className="status-dot status-error mt-2 mr-3 flex-shrink-0"></div>
+                    <div className="status-dot status-neutral mt-2 mr-3 flex-shrink-0" style={{backgroundColor: '#6B7280'}}></div>
                       <span className="text-body-sm text-gray-700">Sensibilidade a ruído: sinais frágeis, facilmente impactados por piscadas, músculos e ambiente.</span>
                     </div>
                     <div className="flex items-start">
-                      <div className="status-dot status-error mt-2 mr-3 flex-shrink-0"></div>
+                    <div className="status-dot status-neutral mt-2 mr-3 flex-shrink-0" style={{backgroundColor: '#6B7280'}}></div>
                       <span className="text-body-sm text-gray-700">Calibração constante: sessões diferentes podem exigir reajustes e novos ciclos de aprendizado.</span>
                     </div>
                     <div className="flex items-start">
-                      <div className="status-dot status-error mt-2 mr-3 flex-shrink-0"></div>
+                    <div className="status-dot status-neutral mt-2 mr-3 flex-shrink-0" style={{backgroundColor: '#6B7280'}}></div>
                       <span className="text-body-sm text-gray-700">Resolução limitada: EEG de superfície tem precisão menor comparado a métodos invasivos.</span>
                     </div>
                   </div>
@@ -1297,23 +1318,27 @@ const App = () => {
 
                 <div className="card p-6 border-0 shadow-lg glass-effect">
                   <div className="flex items-center mb-4">
-                    <div className="w-10 h-10 bg-warning-100 rounded-lg flex items-center justify-center mr-3">
-                      <Users className="w-5 h-5 text-warning-600" />
+                    <div className="w-10 h-10 bg-secondary-100 rounded-lg flex items-center justify-center mr-3">
+                      <Users className="w-5 h-5 text-secondary-600" />
                     </div>
                     <h4 className="text-heading-3 text-gray-900">Desafios Práticos</h4>
                   </div>
                   <div className="space-y-3">
                     <div className="flex items-start">
-                      <div className="status-dot status-warning mt-2 mr-3 flex-shrink-0"></div>
+                    <div className="status-dot status-neutral mt-2 mr-3 flex-shrink-0" style={{backgroundColor: '#6B7280'}}></div>
                       <span className="text-body-sm text-gray-700">Treinamento do usuário: o sistema precisa aprender com o usuário, e o usuário com o sistema.</span>
                     </div>
                     <div className="flex items-start">
-                      <div className="status-dot status-warning mt-2 mr-3 flex-shrink-0"></div>
+                    <div className="status-dot status-neutral mt-2 mr-3 flex-shrink-0" style={{backgroundColor: '#6B7280'}}></div>
                       <span className="text-body-sm text-gray-700">Usabilidade: mesmo com avanço em conforto, o uso cotidiano ainda exige disciplina.</span>
                     </div>
                     <div className="flex items-start">
-                      <div className="status-dot status-warning mt-2 mr-3 flex-shrink-0"></div>
+                    <div className="status-dot status-neutral mt-2 mr-3 flex-shrink-0" style={{backgroundColor: '#6B7280'}}></div>
                       <span className="text-body-sm text-gray-700">Custo e manutenção: acesso a equipamentos e suporte técnico ainda são barreiras.</span>
+                    </div>
+                    <div className="flex items-start">
+                    <div className="status-dot status-neutral mt-2 mr-3 flex-shrink-0" style={{backgroundColor: '#6B7280'}}></div>
+                      <span className="text-body-sm text-gray-700">Dificuldade em adaptar a BCI a contextos reais de uso prolongado, fora de ambientes controlados.</span>
                     </div>
                   </div>
                 </div>
@@ -1404,35 +1429,35 @@ const App = () => {
           {/* Conteúdo principal sem repetir título e subtítulo */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             <div className="card p-8 border-0 shadow-lg glass-effect">
-              <h3 className="text-heading-2 text-secondary-900 mb-6 flex items-center">
-                <div className="w-10 h-10 bg-secondary-500 rounded-xl flex items-center justify-center mr-4">
+              <h3 className="text-heading-2 text-accent-900 mb-6 flex items-center">
+                <div className="w-10 h-10 bg-accent-500 rounded-xl flex items-center justify-center mr-4">
                   <TrendingUp className="w-5 h-5 text-white" />
                 </div>
-                O que demonstramos até aqui
+                O que fizemos até aqui
               </h3>
               <ul className="space-y-4 text-secondary-800">
                 <li className="flex items-start">
-                  <div className="status-dot status-info mt-2 mr-4 flex-shrink-0"></div>
+                <div className="status-dot status-neutral mt-2 mr-3 flex-shrink-0" style={{backgroundColor: '#6B7280'}}></div>
                   <span className="text-body">Uma interface BCI customizada, não-invasiva e treinável em casa.</span>
                 </li>
                 <li className="flex flex-col items-start">
                   <div className="flex items-start">
-                    <div className="status-dot status-info mt-2 mr-4 flex-shrink-0"></div>
+                  <div className="status-dot status-neutral mt-2 mr-3 flex-shrink-0" style={{backgroundColor: '#6B7280'}}></div>
                     <span className="text-body">Classificação robusta de dois estados mentais (imaginação vs. relaxamento), com:</span>
                   </div>
                   <ul className="ml-14 space-y-2">
                     <li className="flex items-start">
-                      <div className="status-dot status-info mt-2 mr-4 flex-shrink-0"></div>
+                    <div className="status-dot status-neutral mt-2 mr-3 flex-shrink-0" style={{backgroundColor: '#6B7280'}}></div>
                       <span className="text-body">Balanced Accuracy: até 98%</span>
                     </li>
                     <li className="flex items-start">
-                      <div className="status-dot status-info mt-2 mr-4 flex-shrink-0"></div>
+                    <div className="status-dot status-neutral mt-2 mr-3 flex-shrink-0" style={{backgroundColor: '#6B7280'}}></div>
                       <span className="text-body">Tempo de resposta: ~100ms</span>
                     </li>
                   </ul>
                 </li>
                 <li className="flex items-start">
-                  <div className="status-dot status-info mt-2 mr-4 flex-shrink-0"></div>
+                <div className="status-dot status-neutral mt-2 mr-3 flex-shrink-0" style={{backgroundColor: '#6B7280'}}></div>
                   <span className="text-body">Pipeline completo de processamento EEG e classificação com ML/DL.</span>
                 </li>
               </ul>
@@ -1440,30 +1465,26 @@ const App = () => {
 
             <div className="card p-8 border-0 shadow-lg glass-effect">
               <h3 className="text-heading-2 text-success-900 mb-6 flex items-center">
-                <div className="w-10 h-10 bg-success-500 rounded-xl flex	items-center justify-center mr-4">
+                <div className="w-10 h-10 bg-accent-500 rounded-xl flex	items-center justify-center mr-4">
                   <Lightbulb className="w-5 h-5 text-white" />
                 </div>
                 Próximos Passos
               </h3>
               <ul className="space-y-4 text-success-800">
                 <li className="flex items-start">
-                  <div className="status-dot status-success mt-2 mr-4 flex-shrink-0"></div>
-                  <span className="text-body">Expandir de comandos binários para um vocabulário expandido.</span>
+                <div className="status-dot status-neutral mt-2 mr-3 flex-shrink-0" style={{backgroundColor: '#6B7280'}}></div>
+                  <span className="text-body">Expandir comandos binários para um vocabulário expandido.</span>
                 </li>
                 <li className="flex items-start">
-                  <div className="status-dot status-success mt-2 mr-4 flex-shrink-0"></div>
+                <div className="status-dot status-neutral mt-2 mr-3 flex-shrink-0" style={{backgroundColor: '#6B7280'}}></div>
                   <span className="text-body">Explorar paradigmas de comunicação simbólica ou emocional.</span>
                 </li>
                 <li className="flex items-start">
-                  <div className="status-dot status-success mt-2 mr-4 flex-shrink-0"></div>
-                  <span className="text-body">Testes com usuários reais em contextos domésticos e assistivos.</span>
-                </li>
-                <li className="flex items-start">
-                  <div className="status-dot status-success mt-2 mr-4 flex-shrink-0"></div>
+                <div className="status-dot status-neutral mt-2 mr-3 flex-shrink-0" style={{backgroundColor: '#6B7280'}}></div>
                   <span className="text-body">Criação de interfaces de feedback adaptativo.</span>
                 </li>
                 <li className="flex items-start">
-                  <div className="status-dot status-success mt-2 mr-4 flex-shrink-0"></div>
+                <div className="status-dot status-neutral mt-2 mr-3 flex-shrink-0" style={{backgroundColor: '#6B7280'}}></div>
                   <span className="text-body">Construção de um produto open-hardware com apoio da comunidade.</span>
                 </li>
               </ul>
@@ -1471,27 +1492,100 @@ const App = () => {
           </div>
 
           <div className="card p-12 border-0 shadow-xl text-center glass-effect neon-glow">
-            <h3 className="text-heading-1 text-gray-900 mb-6">“Um mundo onde pensar é suficiente para se comunicar.”</h3>
+            <h3 className="text-heading-1 text-gray-900 mb-6">“Um mundo onde pensar é suficiente para se comunicar e se expressar.”</h3>
             <p className="text-body-lg text-gray-700 mb-10 max-w-4xl mx-auto leading-relaxed">
-              Este projeto representa um passo em direção a tecnologias de interface cérebro-máquina realmente pessoais, não invasivas e escaláveis, com potencial de transformar a vida de pessoas com limitações motoras, de fala ou expressão — sem abrir mão da autonomia e da privacidade.
+              Este projeto representa um passo em direção a tecnologias de interface cérebro-máquina realmente pessoais, não invasivas e escaláveis, com potencial de transformar a vida e a imaginação das pessoas sem abrir mão da autonomia e da privacidade.
             </p>
             <div className="flex justify-center items-center space-x-6">
               <div className="w-16 h-16 bg-accent-100 rounded-2xl flex items-center justify-center">
                 <Brain className="w-8 h-8 text-accent-600" />
               </div>
               <span className="text-3xl font-light text-gray-400">+</span>
-              <div className="w-16 h-16 bg-success-100 rounded-2xl flex items-center justify-center">
-                <Accessibility className="w-8 h-8 text-success-600" />
+              <div className="w-16 h-16 bg-accent-100 rounded-2xl flex items-center justify-center">
+                <Computer className="w-8 h-8 text-accent-600" />
               </div>
               <span className="text-3xl font-light text-gray-400">=</span>
               <div className="card px-8 py-4 border-0 shadow-lg glass-effect">
-                <span className="text-heading-3 text-gray-900">Inclusão Digital</span>
+                <span className="text-heading-3 text-gray-900">Imaginação Expandida</span>
               </div>
             </div>
           </div>
         </div>
       )
+    },
+    {
+      id: 12,
+      title: "Time dos Sonhos",
+      subtitle: "De um protótipo funcional para uma ferramenta de autonomia real",
+      icon: Users,
+      content: (
+        <div className="space-y-12 animate-fade-in">
+          {/* Conteúdo principal sem repetir título e subtítulo */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div className="card p-8 border-0 shadow-lg glass-effect">
+              <h3 className="text-heading-2 text-accent-900 mb-6 flex items-center">
+                <div className="w-10 h-10 bg-accent-500 rounded-xl flex items-center justify-center mr-4">
+                  <Users className="w-5 h-5 text-white" />
+                </div>
+                Cris
+              </h3>
+              <ul className="space-y-4 text-secondary-800">
+                <li className="flex items-start">
+                <div className="status-dot status-neutral mt-2 mr-3 flex-shrink-0" style={{backgroundColor: '#6B7280'}}></div>
+                  <span className="text-body">Uma interface BCI customizada, não-invasiva e treinável em casa.</span>
+                </li>
+                <li className="flex flex-col items-start">
+                  <div className="flex items-start">
+                  <div className="status-dot status-neutral mt-2 mr-3 flex-shrink-0" style={{backgroundColor: '#6B7280'}}></div>
+                    <span className="text-body">Classificação robusta de dois estados mentais (imaginação vs. relaxamento), com:</span>
+                  </div>
+                  <ul className="ml-14 space-y-2">
+                    <li className="flex items-start">
+                    <div className="status-dot status-neutral mt-2 mr-3 flex-shrink-0" style={{backgroundColor: '#6B7280'}}></div>
+                      <span className="text-body">Balanced Accuracy: até 98%</span>
+                    </li>
+                    <li className="flex items-start">
+                    <div className="status-dot status-neutral mt-2 mr-3 flex-shrink-0" style={{backgroundColor: '#6B7280'}}></div>
+                      <span className="text-body">Tempo de resposta: ~100ms</span>
+                    </li>
+                  </ul>
+                </li>
+                <li className="flex items-start">
+                <div className="status-dot status-neutral mt-2 mr-3 flex-shrink-0" style={{backgroundColor: '#6B7280'}}></div>
+                  <span className="text-body">Pipeline completo de processamento EEG e classificação com ML/DL.</span>
+                </li>
+              </ul>
+            </div>
 
+            <div className="card p-8 border-0 shadow-lg glass-effect">
+              <h3 className="text-heading-2 text-success-900 mb-6 flex items-center">
+                <div className="w-10 h-10 bg-accent-500 rounded-xl flex	items-center justify-center mr-4">
+                  <Lightbulb className="w-5 h-5 text-white" />
+                </div>
+                Próximos Passos
+              </h3>
+              <ul className="space-y-4 text-success-800">
+                <li className="flex items-start">
+                <div className="status-dot status-neutral mt-2 mr-3 flex-shrink-0" style={{backgroundColor: '#6B7280'}}></div>
+                  <span className="text-body">Expandir comandos binários para um vocabulário expandido.</span>
+                </li>
+                <li className="flex items-start">
+                <div className="status-dot status-neutral mt-2 mr-3 flex-shrink-0" style={{backgroundColor: '#6B7280'}}></div>
+                  <span className="text-body">Explorar paradigmas de comunicação simbólica ou emocional.</span>
+                </li>
+                <li className="flex items-start">
+                <div className="status-dot status-neutral mt-2 mr-3 flex-shrink-0" style={{backgroundColor: '#6B7280'}}></div>
+                  <span className="text-body">Criação de interfaces de feedback adaptativo.</span>
+                </li>
+                <li className="flex items-start">
+                <div className="status-dot status-neutral mt-2 mr-3 flex-shrink-0" style={{backgroundColor: '#6B7280'}}></div>
+                  <span className="text-body">Construção de um produto open-hardware com apoio da comunidade.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      )
     }
   ];
 
