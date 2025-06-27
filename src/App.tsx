@@ -1516,7 +1516,7 @@ const App = () => {
     {
       id: 12,
       title: "Time dos Sonhos",
-      subtitle: "De um protótipo funcional para uma ferramenta de autonomia real",
+      subtitle: "Uma ideia e muitas mentes envolvidas",
       icon: Users,
       content: (
         <div className="space-y-12 animate-fade-in">
@@ -1524,64 +1524,40 @@ const App = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
             <div className="card p-8 border-0 shadow-lg glass-effect">
               <h3 className="text-heading-2 text-accent-900 mb-6 flex items-center">
-                <div className="w-10 h-10 bg-accent-500 rounded-xl flex items-center justify-center mr-4">
-                  <Users className="w-5 h-5 text-white" />
-                </div>
-                Cris
+                <img src="https://d26jy9fbi4q9wx.cloudfront.net/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNlhNQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--332b291acfc270c8912380ab97695fdf374c5666/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2RTNKbGMybDZaVjkwYjE5bWFXeHNXd2hwQWNocEFjaDdCam9KWTNKdmNEb09ZWFIwWlc1MGFXOXUiLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--b67d9ded4d28d0969fbb98b4c21b79257705a99a/sanja.jpg" alt="Foto de Cristiane" className="w-10 h-10 justify-center mr-4 rounded-full object-cover" />
+                Cristiane Jorge
               </h3>
-              <ul className="space-y-4 text-secondary-800">
-                <li className="flex items-start">
-                <div className="status-dot status-neutral mt-2 mr-3 flex-shrink-0" style={{backgroundColor: '#6B7280'}}></div>
-                  <span className="text-body">Uma interface BCI customizada, não-invasiva e treinável em casa.</span>
-                </li>
-                <li className="flex flex-col items-start">
-                  <div className="flex items-start">
-                  <div className="status-dot status-neutral mt-2 mr-3 flex-shrink-0" style={{backgroundColor: '#6B7280'}}></div>
-                    <span className="text-body">Classificação robusta de dois estados mentais (imaginação vs. relaxamento), com:</span>
-                  </div>
-                  <ul className="ml-14 space-y-2">
-                    <li className="flex items-start">
-                    <div className="status-dot status-neutral mt-2 mr-3 flex-shrink-0" style={{backgroundColor: '#6B7280'}}></div>
-                      <span className="text-body">Balanced Accuracy: até 98%</span>
-                    </li>
-                    <li className="flex items-start">
-                    <div className="status-dot status-neutral mt-2 mr-3 flex-shrink-0" style={{backgroundColor: '#6B7280'}}></div>
-                      <span className="text-body">Tempo de resposta: ~100ms</span>
-                    </li>
-                  </ul>
-                </li>
-                <li className="flex items-start">
-                <div className="status-dot status-neutral mt-2 mr-3 flex-shrink-0" style={{backgroundColor: '#6B7280'}}></div>
-                  <span className="text-body">Pipeline completo de processamento EEG e classificação com ML/DL.</span>
-                </li>
-              </ul>
+              <div className="space-y-4 text-success-800">
+                <p className="text-body">I was a project manager for 25 years at Naturgy, a gas company in Rio de Janeiro. Currently, I'm transitioning careers and studying data science.</p>
+              </div>
+            </div>
+            <div className="card p-8 border-0 shadow-lg glass-effect">
+              <h3 className="text-heading-2 text-success-900 mb-6 flex items-center">
+              <img src="https://d26jy9fbi4q9wx.cloudfront.net/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBNXZIQXc9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--3bb3177df582153c39539680991aa84bf31349b9/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lKYW5CbFp3WTZCa1ZVT2hOeVpYTnBlbVZmZEc5ZlptbHNiRnNJYVFISWFRSElld1k2Q1dOeWIzQTZEbUYwZEdWdWRHbHZiZz09IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--23cdbdf9871e44adeb4d843a03b0793a5f08394b/linkedin_filtro.jpeg" alt="Foto de Cristiane" className="w-10 h-10 justify-center mr-4 rounded-full object-cover" />
+                Tito Vieira
+              </h3>
+              <div className="space-y-4 text-success-800">
+                <p className="text-body">I have experience in data analysis, currently working in moises.ai/music.ai helping with growth and product analytics. With Le Wagon, I want to deepen my skills in data science and learn to build prediction models to enhance my work.</p>
+              </div>
             </div>
 
             <div className="card p-8 border-0 shadow-lg glass-effect">
-              <h3 className="text-heading-2 text-success-900 mb-6 flex items-center">
-                <div className="w-10 h-10 bg-accent-500 rounded-xl flex	items-center justify-center mr-4">
-                  <Lightbulb className="w-5 h-5 text-white" />
-                </div>
-                Próximos Passos
+              <h3 className="text-heading-2 text-accent-900 mb-6 flex items-center">
+              <img src="https://avatars.githubusercontent.com/u/195757681?v=4" alt="Foto de Cristiane" className="w-10 h-10 justify-center mr-4 rounded-full object-cover" />
+                Mario Tavares
               </h3>
-              <ul className="space-y-4 text-success-800">
-                <li className="flex items-start">
-                <div className="status-dot status-neutral mt-2 mr-3 flex-shrink-0" style={{backgroundColor: '#6B7280'}}></div>
-                  <span className="text-body">Expandir comandos binários para um vocabulário expandido.</span>
-                </li>
-                <li className="flex items-start">
-                <div className="status-dot status-neutral mt-2 mr-3 flex-shrink-0" style={{backgroundColor: '#6B7280'}}></div>
-                  <span className="text-body">Explorar paradigmas de comunicação simbólica ou emocional.</span>
-                </li>
-                <li className="flex items-start">
-                <div className="status-dot status-neutral mt-2 mr-3 flex-shrink-0" style={{backgroundColor: '#6B7280'}}></div>
-                  <span className="text-body">Criação de interfaces de feedback adaptativo.</span>
-                </li>
-                <li className="flex items-start">
-                <div className="status-dot status-neutral mt-2 mr-3 flex-shrink-0" style={{backgroundColor: '#6B7280'}}></div>
-                  <span className="text-body">Construção de um produto open-hardware com apoio da comunidade.</span>
-                </li>
-              </ul>
+              <div className="space-y-4 text-success-800">
+                <p className="text-body">I’m a product manager with a background in finance and tech, having led product initiatives at TRX, Trix Investimentos, and Alice Saúde. Through these roles, I’ve seen how data-driven decisions dramatically improve user engagement and business outcomes. Now, I’m eager to deepen my technical skills by joining a data science and AI bootcamp. My goal is to apply machine learning and advanced analytics to build intelligent products that truly serve users’ needs.</p>
+              </div>
+            </div>
+            <div className="card p-8 border-0 shadow-lg glass-effect">
+              <h3 className="text-heading-2 text-success-900 mb-6 flex items-center">
+              <img src="https://avatars.githubusercontent.com/u/10832911?v=4" alt="Foto de Cristiane" className="w-10 h-10 justify-center mr-4 rounded-full object-cover" />
+                Lina Lopes
+              </h3>
+              <div className="space-y-4 text-success-800">
+                <p className="text-body">With a background in Creative Technology, I specialized in guiding clients through ideation processes and developing physical prototypes using Arduino, electronics, hardware, and graphical interfaces. Over time, my focus has shifted towards Machine Learning. I am currently completing a specialization in Machine Learning for Creative Practices at the University of Bern, Switzerland, and aim to deepen my work in data visualization and Machine Learning.</p>
+              </div>
             </div>
           </div>
         </div>
