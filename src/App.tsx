@@ -1565,6 +1565,17 @@ const App = () => {
               </div>
             </div>
           </div>
+          <div className="card p-6 sm:p-8 shadow-lg border-0 glass-effect">
+                <div className="flex flex-col sm:flex-row items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-4 sm:mb-6">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-success-100 rounded-xl flex items-center justify-center">
+                    <Users className="w-5 h-5 sm:w-6 sm:h-6 text-secondary-600" />
+                  </div>
+                  <span className="text-heading-3 text-gray-900 text-center sm:text-left">Repositório</span>
+                </div>
+                <p className="text-body-sm sm:text-body text-gray-700 leading-relaxed">
+                  Conheça mais sobre nosso projeto no <a href="https://github.com/linalopes/creativity-in-vitro-eeg" target="_blank" className="text-accent-600 underline underline-offset-2 hover:text-secondary-700">repositório no GitHub</a>. Lá você encontrará todo o código fonte, documentação e detalhes técnicos da nossa implementação de interface cérebro-computador.
+                </p>
+              </div>
         </div>
       )
     }
