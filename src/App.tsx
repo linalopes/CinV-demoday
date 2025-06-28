@@ -210,25 +210,34 @@ const App = () => {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mt-8 sm:mt-12">
+
               <div className="card p-6 sm:p-8 border-l-4 border-secondary-500 hover:shadow-xl transition-all duration-300 glass-effect">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-secondary-100 rounded-xl flex items-center justify-center mb-4 sm:mb-6">
-                  <Brain className="w-5 h-5 sm:w-6 sm:h-6 text-secondary-600 mx-auto" />
+              <div className="flex flex-col sm:flex-row items-start sm:items-center mb-4 sm:mb-6">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary-100 rounded-xl flex items-center justify-center mr-0 sm:mr-4 mb-3 sm:mb-0">
+                  <Brain className="w-5 h-5 sm:w-6 sm:h-6 text-accent-600" />
                 </div>
-                <h4 className="text-heading-3 text-gray-900 mb-3 sm:mb-4">Pensamento</h4>
+                <h4 className="text-heading-3 sm:text-heading-2 text-gray-900 text-center sm:text-left">Pensamento</h4>
+                </div>
                 <p className="text-body-sm text-gray-600 leading-relaxed">Captura de sinais neurais através de EEG não-invasivo</p>
               </div>
+
               <div className="card p-6 sm:p-8 border-l-4 border-warning-500 hover:shadow-xl transition-all duration-300 glass-effect">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-warning-100 rounded-xl flex items-center justify-center mb-4 sm:mb-6">
-                  <Zap className="w-5 h-5 sm:w-6 sm:h-6 text-warning-600 mx-auto" />
+              <div className="flex flex-col sm:flex-row items-start sm:items-center mb-4 sm:mb-6">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary-100 rounded-xl flex items-center justify-center mr-0 sm:mr-4 mb-3 sm:mb-0">
+                  <Zap className="w-5 h-5 sm:w-6 sm:h-6 text-accent-600" />
                 </div>
-                <h4 className="text-heading-3 text-gray-900 mb-3 sm:mb-4">Processamento IA</h4>
+                <h4 className="text-heading-3 sm:text-heading-2 text-gray-900 text-center sm:text-left">Sinais & IA</h4>
+                </div>
                 <p className="text-body-sm text-gray-600 leading-relaxed">Algoritmos avançados decodificam padrões neurais</p>
               </div>
+
               <div className="card p-6 sm:p-8 border-l-4 border-success-500 hover:shadow-xl transition-all duration-300 glass-effect sm:col-span-2 lg:col-span-1">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-success-100 rounded-xl flex items-center justify-center mb-4 sm:mb-6">
-                  <Accessibility className="w-5 h-5 sm:w-6 sm:h-6 text-success-600" />
+              <div className="flex flex-col sm:flex-row items-start sm:items-center mb-4 sm:mb-6">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary-100 rounded-xl flex items-center justify-center mr-0 sm:mr-4 mb-3 sm:mb-0">
+                  <Accessibility className="w-5 h-5 sm:w-6 sm:h-6 text-accent-600" />
                 </div>
-                <h4 className="text-heading-3 text-gray-900 mb-3 sm:mb-4">Prompt Neural</h4>
+                <h4 className="text-heading-3 sm:text-heading-2 text-gray-900 text-center sm:text-left">Prompt Neural</h4>
+                </div>
                 <p className="text-body-sm text-gray-600 leading-relaxed">Texto gerado automaticamente, revolucionando o acesso digital</p>
               </div>
             </div>
