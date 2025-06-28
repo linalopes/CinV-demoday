@@ -212,8 +212,8 @@ const App = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mt-8 sm:mt-12">
 
               <div className="card p-6 sm:p-8 border-l-4 border-secondary-500 hover:shadow-xl transition-all duration-300 glass-effect">
-              <div className="flex flex-col sm:flex-row items-start sm:items-center mb-4 sm:mb-6">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary-100 rounded-xl flex items-center justify-center mr-0 sm:mr-4 mb-3 sm:mb-0">
+              <div className="flex flex-col sm:flex-row items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-4 sm:mb-6">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-accent-100 rounded-xl flex items-center justify-center">
                   <Brain className="w-5 h-5 sm:w-6 sm:h-6 text-accent-600" />
                 </div>
                 <h4 className="text-heading-3 sm:text-heading-2 text-gray-900 text-center sm:text-left">Pensamento</h4>
@@ -222,8 +222,8 @@ const App = () => {
               </div>
 
               <div className="card p-6 sm:p-8 border-l-4 border-warning-500 hover:shadow-xl transition-all duration-300 glass-effect">
-              <div className="flex flex-col sm:flex-row items-start sm:items-center mb-4 sm:mb-6">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary-100 rounded-xl flex items-center justify-center mr-0 sm:mr-4 mb-3 sm:mb-0">
+              <div className="flex flex-col sm:flex-row items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-4 sm:mb-6">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-accent-100 rounded-xl flex items-center justify-center">
                   <Zap className="w-5 h-5 sm:w-6 sm:h-6 text-accent-600" />
                 </div>
                 <h4 className="text-heading-3 sm:text-heading-2 text-gray-900 text-center sm:text-left">Sinais & IA</h4>
@@ -232,8 +232,8 @@ const App = () => {
               </div>
 
               <div className="card p-6 sm:p-8 border-l-4 border-success-500 hover:shadow-xl transition-all duration-300 glass-effect sm:col-span-2 lg:col-span-1">
-              <div className="flex flex-col sm:flex-row items-start sm:items-center mb-4 sm:mb-6">
-              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary-100 rounded-xl flex items-center justify-center mr-0 sm:mr-4 mb-3 sm:mb-0">
+              <div className="flex flex-col sm:flex-row items-center space-y-3 sm:space-y-0 sm:space-x-4 mb-4 sm:mb-6">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-accent-100 rounded-xl flex items-center justify-center">
                   <Accessibility className="w-5 h-5 sm:w-6 sm:h-6 text-accent-600" />
                 </div>
                 <h4 className="text-heading-3 sm:text-heading-2 text-gray-900 text-center sm:text-left">Prompt Neural</h4>
@@ -1651,7 +1651,7 @@ const App = () => {
                       </p>
                     </div>
                     {isActive && (
-                      <div className="w-2 h-2 bg-secondary-500 rounded-full animate-pulse"></div>
+                      <div className={`self-center w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-secondary-500 animate-pulse`}></div>
                     )}
                   </button>
                 );
@@ -1718,16 +1718,16 @@ const App = () => {
         <div className="card border-0 shadow-2xl overflow-hidden min-h-[500px] sm:min-h-[700px] glass-effect">
           {/* Progress Indicators */}
           <div className="glass-effect px-4 sm:px-8 py-4 sm:py-6 border-b border-gray-300">
-            <div className="flex justify-center space-x-2 sm:space-x-3">
+            <div className="flex items-center justify-center space-x-2 sm:space-x-3">
               {slides.map((_, index) => (
                 <button
                   key={index}
                   onClick={() => goToSlide(index)}
-                  className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 focus-ring ${index === currentSlide
+                  className={`block w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 focus-ring ${index === currentSlide
                       ? 'bg-secondary-500 scale-125 shadow-lg neon-glow'
                       : 'bg-gray-300 hover:bg-gray-400 hover:scale-110'
                     }`}
-                />
+                ><span className="sr-only">{index + 1}</span></button>
               ))}
             </div>
             <div className="progress-bar mt-3 sm:mt-4 max-w-md mx-auto">
