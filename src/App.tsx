@@ -576,7 +576,7 @@ const App = () => {
                       <div className="w-8 h-8 bg-secondary-100 rounded-full flex items-center justify-center text-secondary-600 font-semibold mr-2">1</div>
                       <p className="text-body-sm text-gray-700">Versão 1.0</p>
                     </div>
-                    <div className="mermaid" dangerouslySetInnerHTML={{ __html: diagram1 }} />
+                    <div className="mermaid mx-auto" dangerouslySetInnerHTML={{ __html: diagram1 }} />
                   </div>
 
                   <div className="flex flex-col items-start w-full md:w-1/2">
@@ -584,7 +584,7 @@ const App = () => {
                       <div className="w-8 h-8 bg-secondary-100 rounded-full flex items-center justify-center text-secondary-600 font-semibold mr-2">2</div>
                       <p className="text-body-sm text-gray-700">Versão 2.0</p>
                     </div>
-                    <div className="mermaid" dangerouslySetInnerHTML={{ __html: diagram2 }} />
+                    <div className="mermaid mx-auto" dangerouslySetInnerHTML={{ __html: diagram2 }} />
                   </div>
                 </div>
                 {/* Diagramas 3 e 4 */}
@@ -594,7 +594,7 @@ const App = () => {
                       <div className="w-8 h-8 bg-secondary-100 rounded-full flex items-center justify-center text-secondary-600 font-semibold mr-2">3</div>
                       <p className="text-body-sm text-gray-700">Versão 3.0</p>
                     </div>
-                    <div className="mermaid" dangerouslySetInnerHTML={{ __html: diagram3 }} />
+                    <div className="mermaid mx-auto" dangerouslySetInnerHTML={{ __html: diagram3 }} />
                   </div>
 
                   <div className="flex flex-col items-start w-full md:w-1/2">
@@ -602,7 +602,7 @@ const App = () => {
                       <div className="w-8 h-8 bg-secondary-100 rounded-full flex items-center justify-center text-secondary-600 font-semibold mr-2">4</div>
                       <p className="text-body-sm text-gray-700">Versão 4.0</p>
                     </div>
-                    <div className="mermaid" dangerouslySetInnerHTML={{ __html: diagram4 }} />
+                    <div className="mermaid mx-auto" dangerouslySetInnerHTML={{ __html: diagram4 }} />
                   </div>
                 </div>
               </div>
@@ -1718,7 +1718,7 @@ const App = () => {
         <div className="card border-0 shadow-2xl overflow-hidden min-h-[500px] sm:min-h-[700px] glass-effect">
           {/* Progress Indicators */}
           <div className="glass-effect px-4 sm:px-8 py-4 sm:py-6 border-b border-gray-300">
-            <div className="flex items-center justify-center space-x-2 sm:space-x-3">
+          <div className="flex items-center justify-center gap-2 sm:gap-3">
               {slides.map((_, index) => (
                 <button
                   key={index}
