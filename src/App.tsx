@@ -1572,7 +1572,7 @@ const App = () => {
                   <span className="text-heading-3 text-gray-900 text-center sm:text-left">Project Blog - Cortex</span>
                 </div>
                 <p className="text-body-sm sm:text-body text-gray-700 leading-relaxed">
-                  Follow our daily research journey on our blog, affectionately called "Cortex". Visit <a href="https://blog.linalopes.info/" target="_blank" className="text-accent-600 underline underline-offset-2 hover:text-secondary-700">blog.linalopes.info</a> to discover our experiments with EEG signals, creative coding explorations, and insights into brain-computer interfaces. We share our successes, challenges, and learnings as we explore the intersection of neuroscience and creativity.
+                  Follow our daily research journey on our blog, affectionately called "Cortex". Visit <a href="https://cinvitro.linalopes.info/" target="_blank" className="text-accent-600 underline underline-offset-2 hover:text-secondary-700">blog.linalopes.info</a> to discover our experiments with EEG signals, creative coding explorations, and insights into brain-computer interfaces. We share our successes, challenges, and learnings as we explore the intersection of neuroscience and creativity.
                 </p>
                 <p className="text-body-sm sm:text-body text-gray-700 leading-relaxed mt-4">
                   You can also find our technical implementation on <a href="https://github.com/linalopes/creativity-in-vitro-eeg" target="_blank" className="text-accent-600 underline underline-offset-2 hover:text-secondary-700">GitHub</a>.
